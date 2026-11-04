@@ -10,13 +10,13 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const defaultTitle = "Mojo: Voice Journal & Mood Tracker for Sleep and Energy";
+const defaultTitle = "MOJO: Voice Journal & Mood Tracker for Sleep and Energy";
 
 export const metadata: Metadata = {
   // Includes the base path (e.g. /mojo): Next joins relative metadata URLs, including generated
   // OG images, onto this pathname. Canonical and OG page URLs are absolute via absoluteUrl().
   metadataBase: new URL(site.url),
-  title: { default: defaultTitle, template: "%s · Mojo" },
+  title: { default: defaultTitle, template: "%s · MOJO" },
   description: site.description,
   applicationName: site.name,
   creator: site.legalName,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "mental health app",
     "journaling app",
     "energy tracker",
-    "Mojo app",
+    "MOJO app",
   ],
   alternates: { canonical: absoluteUrl("/") },
   openGraph: {

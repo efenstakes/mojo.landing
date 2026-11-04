@@ -7,11 +7,11 @@ export const contentType = "image/png";
 export function generateStaticParams() {
   return [{}];
 }
-export const alt = "Mojo guides to mental health and wellbeing";
+export const alt = "MOJO guides to mental health and wellbeing";
 
 export default function Image() {
   return ogImage({
-    kicker: "Mojo guides",
+    kicker: "MOJO guides",
     title: "Mental health & wellbeing guides for work, uni and everyday life",
     footer: "Journaling · Mood · Sleep · Energy · App round-ups",
   });

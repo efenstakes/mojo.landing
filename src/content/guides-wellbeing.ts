@@ -56,7 +56,7 @@ export const wellbeingGuides: Guide[] = [
       {
         heading: "From voice notes to insight",
         body: [
-          "The weakness of plain voice memos is that they're hard to look back through. That's what Mojo is built to solve: you talk, Mojo transcribes it on your phone, turns it into a clean journal entry, and picks out your mood, what lifted or weighed on it, your sleep and any activities you mentioned. You review and save, and over time Mojo shows you the patterns across all your entries.",
+          "The weakness of plain voice memos is that they're hard to look back through. That's what MOJO is built to solve: you talk, MOJO transcribes it on your phone, turns it into a clean journal entry, and picks out your mood, what lifted or weighed on it, your sleep and any activities you mentioned. You review and save, and over time MOJO shows you the patterns across all your entries.",
         ],
       },
     ],
@@ -73,11 +73,11 @@ export const wellbeingGuides: Guide[] = [
       },
       {
         q: "What's the best app for voice journaling?",
-        a: "Look for an app that transcribes what you say, lets you edit it, and organises entries by mood and date. Mojo is built specifically around voice check-ins and turns them into mood, sleep and activity insights.",
+        a: "Look for an app that transcribes what you say, lets you edit it, and organises entries by mood and date. MOJO is built specifically around voice check-ins and turns them into mood, sleep and activity insights.",
       },
       {
         q: "Is voice journaling private?",
-        a: "It depends on the app. Look for on-device transcription, an app lock, and the ability to delete your data. Mojo transcribes on your phone and can be locked with Face ID or your fingerprint.",
+        a: "It depends on the app. Look for on-device transcription, an app lock, and the ability to delete your data. MOJO transcribes on your phone and can be locked with Face ID or your fingerprint.",
       },
     ],
     related: ["benefits-of-journaling-for-mental-health", "journal-prompts-for-work-stress", "best-journaling-apps"],
@@ -137,9 +137,9 @@ export const wellbeingGuides: Guide[] = [
         ],
       },
       {
-        heading: "Journaling with Mojo",
+        heading: "Journaling with MOJO",
         body: [
-          "Mojo is a journal you can talk to. Say how your day went, and Mojo turns it into an entry, tags your mood and what drove it, logs your sleep and activity, and after a week or two shows you what tends to come before your best days.",
+          "MOJO is a journal you can talk to. Say how your day went, and MOJO turns it into an entry, tags your mood and what drove it, logs your sleep and activity, and after a week or two shows you what tends to come before your best days.",
         ],
       },
     ],
@@ -211,7 +211,7 @@ export const wellbeingGuides: Guide[] = [
       {
         heading: "Let an app do the analysis",
         body: [
-          "Spotting patterns by hand is slow. Mojo captures mood, sleep, activity and mood drivers in a single voice check-in, then finds the patterns for you: what tends to come before your best days, and a daily energy score that explains what's driving it.",
+          "Spotting patterns by hand is slow. MOJO captures mood, sleep, activity and mood drivers in a single voice check-in, then finds the patterns for you: what tends to come before your best days, and a daily energy score that explains what's driving it.",
         ],
       },
     ],
@@ -227,7 +227,7 @@ export const wellbeingGuides: Guide[] = [
       },
       {
         q: "How long does it take to see mood patterns?",
-        a: "Often two to four weeks of daily entries. Mojo starts showing patterns after about ten days of check-ins.",
+        a: "Often two to four weeks of daily entries. MOJO starts showing patterns after about ten days of check-ins.",
       },
     ],
     related: ["best-mood-tracker-apps", "how-sleep-affects-mood", "benefits-of-journaling-for-mental-health"],
@@ -278,7 +278,7 @@ export const wellbeingGuides: Guide[] = [
       {
         heading: "See the link in your own data",
         body: [
-          "Knowing that sleep matters is one thing; seeing it in your own life is what changes behaviour. Log sleep and mood together for a couple of weeks and the pattern usually jumps out. Mojo tracks both from a 30-second check-in and will tell you if, for example, you usually feel better after seven-plus hours.",
+          "Knowing that sleep matters is one thing; seeing it in your own life is what changes behaviour. Log sleep and mood together for a couple of weeks and the pattern usually jumps out. MOJO tracks both from a 30-second check-in and will tell you if, for example, you usually feel better after seven-plus hours.",
         ],
       },
       {
@@ -345,7 +345,7 @@ export const wellbeingGuides: Guide[] = [
         heading: "How to find your biggest drains",
         body: [
           "Everyone's mix is different. For two weeks, note your energy each day along with your sleep, mood and activity. Then compare your highest- and lowest-energy days. The difference is usually obvious.",
-          "Mojo does this automatically: it gives you a daily energy score from 0 to 100, shows what raised or lowered it, and suggests the one thing that most often recharges you.",
+          "MOJO does this automatically: it gives you a daily energy score from 0 to 100, shows what raised or lowered it, and suggests the one thing that most often recharges you.",
         ],
       },
       {
@@ -429,7 +429,7 @@ export const wellbeingGuides: Guide[] = [
       {
         heading: "Find what works for your mood",
         body: [
-          "Different people get different lifts from different activities. Track what you do and how you feel and you'll see which activities do the most for you. Mojo compares your mood on days with and without each activity, like walking or yoga, and shows you which ones help most.",
+          "Different people get different lifts from different activities. Track what you do and how you feel and you'll see which activities do the most for you. MOJO compares your mood on days with and without each activity, like walking or yoga, and shows you which ones help most.",
         ],
       },
     ],
@@ -494,7 +494,7 @@ export const wellbeingGuides: Guide[] = [
       {
         heading: "Track lightly and celebrate streaks",
         body: [
-          "Seeing progress is motivating. A simple streak or tick-box works, and seeing how the habit affects your mood is even better. When you notice you feel better on walk days, you'll walk more. Mojo tracks streaks and shows how habits like walking or sleeping earlier line up with your mood and energy.",
+          "Seeing progress is motivating. A simple streak or tick-box works, and seeing how the habit affects your mood is even better. When you notice you feel better on walk days, you'll walk more. MOJO tracks streaks and shows how habits like walking or sleeping earlier line up with your mood and energy.",
         ],
       },
       {

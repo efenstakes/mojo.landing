@@ -7,7 +7,7 @@ const community = [
 ];
 
 const privacy = [
-  { Icon: FingerprintIcon, title: "Mojo Pass", text: "Lock the app with Face ID or your fingerprint, so your journal stays yours." },
+  { Icon: FingerprintIcon, title: "MOJO Pass", text: "Lock the app with Face ID or your fingerprint, so your journal stays yours." },
   { Icon: LockIcon, title: "Transcribed on-device", text: "Your voice is turned into text right on your phone before anything else happens." },
   { Icon: ShieldIcon, title: "Your data, your call", text: "Export or delete your data any time, straight from settings." },
 ];

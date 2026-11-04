@@ -4,7 +4,7 @@ import { absoluteUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Mojo collects, uses and protects your journal, mood, sleep and activity data, and how to export or delete it.",
+  description: "How MOJO collects, uses and protects your journal, mood, sleep and activity data, and how to export or delete it.",
   alternates: { canonical: absoluteUrl("/privacy") },
 };
 
@@ -13,11 +13,11 @@ export default function PrivacyPage() {
     <LegalPage
       title="Privacy policy"
       updated="2026-11-04"
-      intro="Your journal is personal. This page explains, in plain language, what Mojo collects, why, who helps us run the service, and the control you have over your data."
+      intro="Your journal is personal. This page explains, in plain language, what MOJO collects, why, who helps us run the service, and the control you have over your data."
     >
       <h2>Who we are</h2>
       <p>
-        Mojo is a wellness app made by {site.legalName}. You can reach us at{" "}
+        MOJO is a wellness app made by {site.legalName}. You can reach us at{" "}
         <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a> about anything on this page.
       </p>
 
@@ -29,24 +29,24 @@ export default function PrivacyPage() {
           milestones.
         </li>
         <li>Community content you choose to post, such as posts, comments and group membership.</li>
-        <li>Settings and preferences, such as reminder times and your Mojo Pass lock.</li>
+        <li>Settings and preferences, such as reminder times and your MOJO Pass lock.</li>
         <li>Technical data needed to run the app: device type, app version, notification tokens and error logs.</li>
         <li>If you join the launch list on this website: your email address.</li>
       </ul>
 
       <h2>How we use it</h2>
       <ul>
-        <li>To run Mojo: save your entries, sync them across your devices and send the reminders you ask for.</li>
+        <li>To run MOJO: save your entries, sync them across your devices and send the reminders you ask for.</li>
         <li>
           To power Halo insights: turning voice check-ins into journal entries and logs, and estimating your energy
           score and the patterns behind it.
         </li>
         <li>To keep the service secure and fix problems.</li>
-        <li>To email you about your account and, if you joined the launch list, to tell you when Mojo launches.</li>
+        <li>To email you about your account and, if you joined the launch list, to tell you when MOJO launches.</li>
       </ul>
       <p>We don&apos;t sell your personal data, and we don&apos;t use your journal for advertising.</p>
 
-      <h2>Who helps us run Mojo</h2>
+      <h2>Who helps us run MOJO</h2>
       <p>
         We use trusted providers to host and operate the service, including Amazon Web Services (cloud hosting, file
         storage and the AI models behind Halo) and Google Firebase (sign-in and push notifications). They process
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
       <h2>What you share is up to you</h2>
       <p>
         Your journal and logs are private. Nothing appears in the community unless you post it, and you can lock the
-        app with Mojo Pass.
+        app with MOJO Pass.
       </p>
 
       <h2>Your choices and rights</h2>
@@ -82,11 +82,11 @@ export default function PrivacyPage() {
       </p>
 
       <h2>Children</h2>
-      <p>Mojo isn&apos;t intended for children under 13, and we don&apos;t knowingly collect their data.</p>
+      <p>MOJO isn&apos;t intended for children under 13, and we don&apos;t knowingly collect their data.</p>
 
       <h2>Not medical advice</h2>
       <p>
-        Mojo supports everyday wellbeing. It isn&apos;t a medical device and doesn&apos;t diagnose or treat any
+        MOJO supports everyday wellbeing. It isn&apos;t a medical device and doesn&apos;t diagnose or treat any
         condition.
       </p>
 

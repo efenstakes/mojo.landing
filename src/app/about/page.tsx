@@ -8,16 +8,16 @@ import WaitlistForm from "@/components/waitlist-form";
 import { launchLabel } from "@/lib/launch";
 import { absoluteUrl, site } from "@/lib/site";
 
-const title = "About Mojo";
+const title = "About MOJO";
 const description =
-  "Mojo is a voice-first wellness journal from the team behind Heylixir. Why we built it, what we believe about privacy and wellbeing, and how to reach us.";
+  "MOJO is a voice-first wellness journal from the team behind Heylixir. Why we built it, what we believe about privacy and wellbeing, and how to reach us.";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Mojo: The Voice Journal From the Heylixir Team" },
+  title: { absolute: "About MOJO: The Voice Journal From the Heylixir Team" },
   description,
   alternates: { canonical: absoluteUrl("/about") },
-  openGraph: { type: "website", url: absoluteUrl("/about"), title: `${title} · Mojo`, description },
-  twitter: { card: "summary_large_image", title: `${title} · Mojo`, description },
+  openGraph: { type: "website", url: absoluteUrl("/about"), title: `${title} · MOJO`, description },
+  twitter: { card: "summary_large_image", title: `${title} · MOJO`, description },
 };
 
 const beliefs = [
@@ -39,7 +39,7 @@ const beliefs = [
   {
     Icon: HeartIcon,
     title: "Wellbeing, not diagnosis",
-    body: "Mojo is for everyday wellbeing. It isn't a medical device, and we're clear about pointing people to professional help when they need it.",
+    body: "MOJO is for everyday wellbeing. It isn't a medical device, and we're clear about pointing people to professional help when they need it.",
   },
 ];
 
@@ -67,10 +67,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-teal-deep">About</p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-6xl">
-            Helping people <span className="text-gradient">find their mojo</span>
+            Helping people <span className="text-gradient">find their MOJO</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            Mojo is a voice journal and mood tracker. You say how your day went, and Mojo turns it into a journal entry,
+            MOJO is a voice journal and mood tracker. You say how your day went, and MOJO turns it into a journal entry,
             logs your mood, sleep and activity, and shows you what really lifts your energy.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
 
       <section className="px-4 py-10">
         <div className="mx-auto max-w-3xl space-y-5 text-lg leading-relaxed text-ink/90">
-          <h2 className="text-3xl font-extrabold tracking-tight text-ink">Why we built Mojo</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight text-ink">Why we built MOJO</h2>
           <p>
             We spent years building Heylixir, an app that helps people living with chronic illness track how they feel
             and share it with their care team. Again and again, we saw the same thing: the simple act of checking in
@@ -86,7 +86,7 @@ export default function AboutPage() {
           </p>
           <p>
             That shouldn&apos;t only be for people managing a condition. Everyone has weeks where their energy dips and
-            they can&apos;t say why. Mojo takes what we learned and makes it light, fast and fun for everyday life:
+            they can&apos;t say why. MOJO takes what we learned and makes it light, fast and fun for everyday life:
             working a 9-5, getting through uni, or just trying to feel more like yourself.
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
       <section className="px-4 py-16">
         <div className="glass mx-auto flex max-w-4xl flex-col items-center rounded-blob px-6 py-12 text-center">
           <h2 className="text-3xl font-extrabold tracking-tight">Be first on {launchLabel}</h2>
-          <p className="mt-3 max-w-xl text-ink-soft">Join the list and we&apos;ll email you the moment Mojo is live.</p>
+          <p className="mt-3 max-w-xl text-ink-soft">Join the list and we&apos;ll email you the moment MOJO is live.</p>
           <LaunchCountdown className="mt-6 flex flex-col items-center" />
           <WaitlistForm source="about" className="mt-6" />
         </div>

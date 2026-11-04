@@ -57,7 +57,7 @@ export const burnoutGuides: Guide[] = [
         heading: "Step 5: Watch your trend, not your day",
         body: [
           "Recovery isn't a straight line. You'll have good days and bad days, which makes it hard to tell if you're actually getting better. A quick daily log of mood, sleep and energy shows the trend across weeks, so a bad Tuesday doesn't convince you nothing is working.",
-          "Mojo's daily energy score does this from a 30-second voice check-in, and shows which factors are helping or holding you back.",
+          "MOJO's daily energy score does this from a 30-second voice check-in, and shows which factors are helping or holding you back.",
         ],
       },
       {
@@ -139,7 +139,7 @@ export const burnoutGuides: Guide[] = [
       {
         heading: "Seeing which pattern fits you",
         body: [
-          "It's hard to judge from how you feel today. A few weeks of daily check-ins on mood, sleep and energy show whether your low points follow busy weeks (stress), keep sliding regardless (burnout), or colour everything including weekends and things you used to enjoy (which is worth discussing with a doctor). Mojo turns that into a 30-second voice note and shows the trend back to you.",
+          "It's hard to judge from how you feel today. A few weeks of daily check-ins on mood, sleep and energy show whether your low points follow busy weeks (stress), keep sliding regardless (burnout), or colour everything including weekends and things you used to enjoy (which is worth discussing with a doctor). MOJO turns that into a 30-second voice note and shows the trend back to you.",
         ],
       },
       { heading: "When to get help", body: [CRISIS] },
@@ -212,7 +212,7 @@ export const burnoutGuides: Guide[] = [
       {
         heading: "Spot the slide before exams",
         body: [
-          "Burnout builds over weeks, so it's easy to miss until exam season. A quick daily check-in on mood, sleep and energy makes the slide visible early. Mojo makes it a 30-second voice note and shows patterns like your worst study days following short nights.",
+          "Burnout builds over weeks, so it's easy to miss until exam season. A quick daily check-in on mood, sleep and energy makes the slide visible early. MOJO makes it a 30-second voice note and shows patterns like your worst study days following short nights.",
         ],
       },
       { heading: "When to get help", body: [`Your university's wellbeing or counselling service is free and confidential. ${CRISIS}`] },
@@ -283,7 +283,7 @@ export const burnoutGuides: Guide[] = [
       {
         heading: "Early warning",
         body: [
-          "10. Check in with yourself daily. Burnout builds so slowly that you rarely notice it day to day. A quick log of mood, sleep and energy shows when your trend starts heading down, while it's still easy to correct. Mojo's daily energy score is built for exactly this, from a 30-second voice check-in.",
+          "10. Check in with yourself daily. Burnout builds so slowly that you rarely notice it day to day. A quick log of mood, sleep and energy shows when your trend starts heading down, while it's still easy to correct. MOJO's daily energy score is built for exactly this, from a 30-second voice check-in.",
         ],
       },
       { heading: "If you're already burnt out", body: ["Prevention habits still help, but recovery also needs a real reduction in load. See our guide to recovering from burnout, and talk to a professional if things aren't improving."] },

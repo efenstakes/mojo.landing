@@ -53,7 +53,7 @@ export const universityGuides: Guide[] = [
       {
         heading: "Notice the slide early",
         body: [
-          "Things rarely fall apart in a day. A quick daily check-in of how you feel, how you slept and what you did makes a downward trend visible while it's still easy to fix. Mojo turns that check-in into a 30-second voice note and shows you patterns like 'your mood is better on days you leave your room before noon'.",
+          "Things rarely fall apart in a day. A quick daily check-in of how you feel, how you slept and what you did makes a downward trend visible while it's still easy to fix. MOJO turns that check-in into a 30-second voice note and shows you patterns like 'your mood is better on days you leave your room before noon'.",
         ],
       },
       {
@@ -147,7 +147,7 @@ export const universityGuides: Guide[] = [
       {
         heading: "Track how you're coping",
         body: [
-          "Exam season is when a quick daily check-in pays off most. Logging mood, sleep and activity shows you, for instance, that your worst study days follow your shortest nights. Mojo makes this a 30-second voice note and shows the pattern back to you.",
+          "Exam season is when a quick daily check-in pays off most. Logging mood, sleep and activity shows you, for instance, that your worst study days follow your shortest nights. MOJO makes this a 30-second voice note and shows the pattern back to you.",
         ],
       },
       {
@@ -224,7 +224,7 @@ export const universityGuides: Guide[] = [
       {
         heading: "See how sleep shapes your days",
         body: [
-          "Once you track sleep alongside mood for a couple of weeks, the link is usually obvious: brighter, more focused days after seven-plus hours. Seeing it in your own data is far more motivating than being told. Mojo logs your sleep with your daily check-in and points out exactly that kind of pattern.",
+          "Once you track sleep alongside mood for a couple of weeks, the link is usually obvious: brighter, more focused days after seven-plus hours. Seeing it in your own data is far more motivating than being told. MOJO logs your sleep with your daily check-in and points out exactly that kind of pattern.",
         ],
       },
     ],

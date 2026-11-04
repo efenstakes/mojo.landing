@@ -1,15 +1,15 @@
 import type { AppPick, Guide } from "./types";
 
 /**
- * Comparison guides. We make Mojo, which these pages disclose up front. Descriptions of other
+ * Comparison guides. We make MOJO, which these pages disclose up front. Descriptions of other
  * apps stay general and factual (what each is known for), with no prices, ratings or feature
  * claims that go stale quickly.
  */
 
-const mojo = (bestFor: string, summary: string): AppPick => ({ name: "Mojo", bestFor, summary, isMojo: true });
+const mojo = (bestFor: string, summary: string): AppPick => ({ name: "MOJO", bestFor, summary, isMojo: true });
 
 const DISCLOSURE =
-  "Disclosure: we make Mojo, so it's listed first. Every other app here is one we'd genuinely suggest for the use case, and we've kept descriptions to what each app is known for.";
+  "Disclosure: we make MOJO, so it's listed first. Every other app here is one we'd genuinely suggest for the use case, and we've kept descriptions to what each app is known for.";
 
 const SAFETY_SECTION = {
   heading: "Apps help, but they're not treatment",
@@ -36,7 +36,7 @@ export const appGuides: Guide[] = [
     published: "2026-11-04",
     updated: "2026-11-04",
     intro:
-      "If you work a 9-5, the best mental health app is one that fits into the cracks of your day: a 30-second check-in, a 5-minute reset between meetings, or something to switch off with at night. Mojo is best for spotting what drains you through quick voice check-ins; Headspace and Calm are strong for guided meditation and sleep; Insight Timer has a huge free library; and Finch makes small daily self-care goals feel rewarding.",
+      "If you work a 9-5, the best mental health app is one that fits into the cracks of your day: a 30-second check-in, a 5-minute reset between meetings, or something to switch off with at night. MOJO is best for spotting what drains you through quick voice check-ins; Headspace and Calm are strong for guided meditation and sleep; Insight Timer has a huge free library; and Finch makes small daily self-care goals feel rewarding.",
     sections: [
       {
         heading: "What a 9-5 worker actually needs from an app",
@@ -57,7 +57,7 @@ export const appGuides: Guide[] = [
       {
         heading: "How to pick the right one",
         body: [
-          "If you don't know why some weeks feel worse than others, start with tracking: Mojo or a mood tracker will show you. If you already know you're stressed and want to calm down, start with guided meditation. Many people use one of each: a quick check-in for awareness and a meditation app for the moments that need it.",
+          "If you don't know why some weeks feel worse than others, start with tracking: MOJO or a mood tracker will show you. If you already know you're stressed and want to calm down, start with guided meditation. Many people use one of each: a quick check-in for awareness and a meditation app for the moments that need it.",
           "Check whether your employer offers a wellbeing benefit or an Employee Assistance Programme (EAP). Some include access to meditation apps or free, confidential counselling.",
         ],
       },
@@ -66,7 +66,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Seeing what drains you at work",
-        "Say how your day went in about 30 seconds and Mojo turns it into a journal entry, logs your mood, sleep and activity, and shows patterns like your hardest weekday or how short nights affect your focus. Launching on iOS and Android on 1 December 2026.",
+        "Say how your day went in about 30 seconds and MOJO turns it into a journal entry, logs your mood, sleep and activity, and shows patterns like your hardest weekday or how short nights affect your focus. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "Headspace",
@@ -102,11 +102,11 @@ export const appGuides: Guide[] = [
     faqs: [
       {
         q: "What is the best mental health app for work stress?",
-        a: "It depends on what you need. For understanding what drives your stress, a check-in app like Mojo that tracks mood, sleep and activity works well. For calming down in the moment, a meditation app like Headspace, Calm or Insight Timer is a good fit.",
+        a: "It depends on what you need. For understanding what drives your stress, a check-in app like MOJO that tracks mood, sleep and activity works well. For calming down in the moment, a meditation app like Headspace, Calm or Insight Timer is a good fit.",
       },
       {
         q: "Are there free mental health apps for working professionals?",
-        a: "Yes. Insight Timer has a large free library, and many apps including Mojo are free to start. Your employer may also offer a wellbeing benefit or an EAP at no cost to you.",
+        a: "Yes. Insight Timer has a large free library, and many apps including MOJO are free to start. Your employer may also offer a wellbeing benefit or an EAP at no cost to you.",
       },
       {
         q: "How much time do I need to spend in a mental health app each day?",
@@ -132,7 +132,7 @@ export const appGuides: Guide[] = [
     published: "2026-11-04",
     updated: "2026-11-04",
     intro:
-      "The best mental health apps for students are quick, free to start and help with the things uni throws at you: irregular sleep, exam stress and loneliness. Mojo is best for spotting how sleep and routine affect your mood with 30-second voice check-ins; How We Feel helps you name your emotions; Finch makes self-care feel rewarding; Daylio is a fast tap-based mood diary; and Insight Timer offers a large free meditation library.",
+      "The best mental health apps for students are quick, free to start and help with the things uni throws at you: irregular sleep, exam stress and loneliness. MOJO is best for spotting how sleep and routine affect your mood with 30-second voice check-ins; How We Feel helps you name your emotions; Finch makes self-care feel rewarding; Daylio is a fast tap-based mood diary; and Insight Timer offers a large free meditation library.",
     sections: [
       {
         heading: "What students should look for",
@@ -161,7 +161,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Seeing how sleep and routine affect your mood",
-        "Talk for 30 seconds about your day and Mojo logs your mood, sleep and activity, then points out patterns like better days after seven-plus hours of sleep or when you leave your room before noon. Launching on iOS and Android on 1 December 2026.",
+        "Talk for 30 seconds about your day and MOJO logs your mood, sleep and activity, then points out patterns like better days after seven-plus hours of sleep or when you leave your room before noon. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "How We Feel",
@@ -196,7 +196,7 @@ export const appGuides: Guide[] = [
     faqs: [
       {
         q: "What is the best free mental health app for students?",
-        a: "Insight Timer and How We Feel are known for having a lot available for free, and Mojo is free to start. The best one is the one you'll actually open every day.",
+        a: "Insight Timer and How We Feel are known for having a lot available for free, and MOJO is free to start. The best one is the one you'll actually open every day.",
       },
       {
         q: "Can a mental health app help with exam stress?",
@@ -222,7 +222,7 @@ export const appGuides: Guide[] = [
     published: "2026-11-04",
     updated: "2026-11-04",
     intro:
-      "The best mood tracker is the one you'll use every day, so it comes down to how you like to log. Mojo lets you just talk and logs mood, sleep and activity for you; Daylio is a fast tap-based diary; How We Feel focuses on naming your emotions precisely; and Finch wraps mood check-ins into a gentle self-care routine.",
+      "The best mood tracker is the one you'll use every day, so it comes down to how you like to log. MOJO lets you just talk and logs mood, sleep and activity for you; Daylio is a fast tap-based diary; How We Feel focuses on naming your emotions precisely; and Finch wraps mood check-ins into a gentle self-care routine.",
     sections: [
       {
         heading: "Why most people give up on mood tracking",
@@ -254,7 +254,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Logging by voice, with sleep and activity included",
-        "Speak for about 30 seconds and Mojo logs your mood, sleep and activity from what you said, keeps it as a journal entry, and shows patterns plus a daily energy score once it has about a week of check-ins. Launching on iOS and Android on 1 December 2026.",
+        "Speak for about 30 seconds and MOJO logs your mood, sleep and activity from what you said, keeps it as a journal entry, and shows patterns plus a daily energy score once it has about a week of check-ins. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "Daylio",
@@ -283,15 +283,15 @@ export const appGuides: Guide[] = [
     faqs: [
       {
         q: "What is the easiest mood tracker app to use?",
-        a: "Voice-based trackers like Mojo are the quickest because you just talk. Tap-based apps like Daylio are also fast if you prefer not to speak.",
+        a: "Voice-based trackers like MOJO are the quickest because you just talk. Tap-based apps like Daylio are also fast if you prefer not to speak.",
       },
       {
         q: "Is there a mood tracker that also tracks sleep?",
-        a: "Yes. Mojo logs sleep along with mood and activity from your voice check-in, and several other apps let you add sleep as a tag or activity.",
+        a: "Yes. MOJO logs sleep along with mood and activity from your voice check-in, and several other apps let you add sleep as a tag or activity.",
       },
       {
         q: "How long before a mood tracker shows useful patterns?",
-        a: "Usually two to four weeks of consistent check-ins. Mojo starts showing an energy score after about a week.",
+        a: "Usually two to four weeks of consistent check-ins. MOJO starts showing an energy score after about a week.",
       },
     ],
     related: ["how-to-track-your-mood", "how-sleep-affects-mood", "best-journaling-apps"],
@@ -313,7 +313,7 @@ export const appGuides: Guide[] = [
     published: "2026-11-04",
     updated: "2026-11-04",
     intro:
-      "The best journaling app is one that removes the blank-page problem. Mojo lets you journal by voice and turns it into an entry with your mood, sleep and activity; Day One is a polished classic journal with photos and multiple journals; Stoic guides you with morning and evening prompts; and Reflectly offers structured, prompt-led entries.",
+      "The best journaling app is one that removes the blank-page problem. MOJO lets you journal by voice and turns it into an entry with your mood, sleep and activity; Day One is a polished classic journal with photos and multiple journals; Stoic guides you with morning and evening prompts; and Reflectly offers structured, prompt-led entries.",
     sections: [
       {
         heading: "Why journal in an app at all",
@@ -339,7 +339,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Voice journaling",
-        "Just talk about your day. Mojo transcribes it into a journal entry, picks out your mood, sleep and activity, and helps you see patterns across weeks. You can type too. Launching on iOS and Android on 1 December 2026.",
+        "Just talk about your day. MOJO transcribes it into a journal entry, picks out your mood, sleep and activity, and helps you see patterns across weeks. You can type too. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "Day One",
@@ -368,7 +368,7 @@ export const appGuides: Guide[] = [
     faqs: [
       {
         q: "What's the best journaling app if I hate writing?",
-        a: "A voice journaling app like Mojo. You talk for 30 seconds and it turns what you said into an entry.",
+        a: "A voice journaling app like MOJO. You talk for 30 seconds and it turns what you said into an entry.",
       },
       {
         q: "Is journaling in an app as good as on paper?",

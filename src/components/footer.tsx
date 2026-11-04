@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mx-auto mt-6 max-w-6xl px-4 text-center text-xs text-ink-soft">
-        © {YEAR} {site.legalName}. Mojo supports everyday wellbeing and is not a medical device. If
+        © {YEAR} {site.legalName}. MOJO supports everyday wellbeing and is not a medical device. If
         you&apos;re in crisis, call your local emergency number or a crisis line such as 988 (US) or 116 123 (UK).
       </p>
     </footer>

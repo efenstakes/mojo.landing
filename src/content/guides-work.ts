@@ -60,7 +60,7 @@ export const workGuides: Guide[] = [
         heading: "Notice your patterns with a 2-minute daily check-in",
         body: [
           "The hardest part of protecting your mental health at work is that drains build slowly. A quick daily check-in makes them visible. Note your mood, how you slept and whether you moved. After a couple of weeks you'll see patterns, like low mood after short nights, or Tuesdays being your hardest day because of a standing meeting.",
-          "This is exactly what Mojo is built for: you say how your day went in a few seconds, and Mojo logs your mood, sleep and activity and shows you what tends to lift or drain your energy.",
+          "This is exactly what MOJO is built for: you say how your day went in a few seconds, and MOJO logs your mood, sleep and activity and shows you what tends to lift or drain your energy.",
         ],
       },
       {
@@ -134,7 +134,7 @@ export const workGuides: Guide[] = [
         heading: "Why tracking helps you catch it early",
         body: [
           "The trouble with burnout is that each day looks almost the same as the one before, so you don't notice the slide. A simple daily log of mood, sleep and energy turns that slow slide into a visible trend. If your mood has been drifting down for three weeks and your sleep keeps shrinking, that's your cue to act, long before you hit a wall.",
-          "Mojo's daily energy score is designed for this: it estimates your energy from your recent mood, sleep and activity and shows what's driving it, so you can spot a downward trend early.",
+          "MOJO's daily energy score is designed for this: it estimates your energy from your recent mood, sleep and activity and shows what's driving it, so you can spot a downward trend early.",
         ],
       },
       {
@@ -217,7 +217,7 @@ export const workGuides: Guide[] = [
       {
         heading: "Empty your head",
         body: [
-          "Racing thoughts about work fade once they're somewhere other than your head. Journaling is one of the simplest ways to do that, and you don't need to write. Talking it out for two minutes works just as well, which is why Mojo is built around voice check-ins.",
+          "Racing thoughts about work fade once they're somewhere other than your head. Journaling is one of the simplest ways to do that, and you don't need to write. Talking it out for two minutes works just as well, which is why MOJO is built around voice check-ins.",
         ],
         bullets: [
           "7. Do a 2-minute voice journal: what happened, how you feel, what's next.",
@@ -237,7 +237,7 @@ export const workGuides: Guide[] = [
       {
         heading: "See which ones work for you",
         body: [
-          "Not every method works for everyone. Try a few for two weeks and note how you feel in the evening and how you sleep. Patterns appear quickly: maybe your mood is noticeably better on days you walk after work. Mojo surfaces exactly these patterns from your check-ins.",
+          "Not every method works for everyone. Try a few for two weeks and note how you feel in the evening and how you sleep. Patterns appear quickly: maybe your mood is noticeably better on days you walk after work. MOJO surfaces exactly these patterns from your check-ins.",
         ],
       },
     ],
@@ -347,7 +347,7 @@ export const workGuides: Guide[] = [
       {
         heading: "Turn your entries into insight",
         body: [
-          "The real value of journaling shows up over time. When you look back across weeks, you'll see which situations reliably stress you and what reliably helps. Mojo does this for you: it turns spoken check-ins into journal entries, tags the mood and what drove it, and points out patterns like 'your mood is usually higher on days you exercise'.",
+          "The real value of journaling shows up over time. When you look back across weeks, you'll see which situations reliably stress you and what reliably helps. MOJO does this for you: it turns spoken check-ins into journal entries, tags the mood and what drove it, and points out patterns like 'your mood is usually higher on days you exercise'.",
         ],
       },
     ],
@@ -367,7 +367,7 @@ export const workGuides: Guide[] = [
       },
       {
         q: "Can I journal by talking instead of writing?",
-        a: "Yes. Voice journaling works the same way and is often easier on busy or tiring days. Apps like Mojo transcribe what you say into a journal entry.",
+        a: "Yes. Voice journaling works the same way and is often easier on busy or tiring days. Apps like MOJO transcribe what you say into a journal entry.",
       },
     ],
     related: ["voice-journaling-guide", "benefits-of-journaling-for-mental-health", "how-to-decompress-after-work"],
@@ -421,7 +421,7 @@ export const workGuides: Guide[] = [
       {
         heading: "Keep an eye on your patterns",
         body: [
-          "Because remote days blur together, it's easy to miss a slow decline. A daily check-in of mood, sleep and activity shows you, for example, that days without leaving the house are your lowest. Mojo makes that check-in a 30-second voice note and surfaces those patterns for you.",
+          "Because remote days blur together, it's easy to miss a slow decline. A daily check-in of mood, sleep and activity shows you, for example, that days without leaving the house are your lowest. MOJO makes that check-in a 30-second voice note and surfaces those patterns for you.",
         ],
       },
     ],

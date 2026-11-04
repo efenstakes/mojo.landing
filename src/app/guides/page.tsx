@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     "best mental health apps",
   ],
   alternates: { canonical: absoluteUrl("/guides") },
-  openGraph: { type: "website", url: absoluteUrl("/guides"), title: `${title} · Mojo`, description },
-  twitter: { card: "summary_large_image", title: `${title} · Mojo`, description },
+  openGraph: { type: "website", url: absoluteUrl("/guides"), title: `${title} · MOJO`, description },
+  twitter: { card: "summary_large_image", title: `${title} · MOJO`, description },
 };
 
 export default function GuidesPage() {
@@ -65,7 +65,7 @@ export default function GuidesPage() {
 
       <section className="px-4 pb-10 pt-32 sm:pt-40">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-teal-deep">Mojo guides</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-teal-deep">MOJO guides</p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-6xl">
             Feel better, <span className="text-gradient">one small habit at a time</span>
           </h1>
@@ -109,7 +109,7 @@ export default function GuidesPage() {
         <div className="glass mx-auto flex max-w-4xl flex-col items-center rounded-blob px-6 py-12 text-center">
           <h2 className="text-3xl font-extrabold tracking-tight">Put it into practice in 30 seconds a day</h2>
           <p className="mt-3 max-w-xl text-ink-soft">
-            Mojo turns a quick voice check-in into your mood, sleep and activity log, and shows you what lifts your
+            MOJO turns a quick voice check-in into your mood, sleep and activity log, and shows you what lifts your
             energy. Get an email the day it launches.
           </p>
           <LaunchCountdown className="mt-6 flex flex-col items-center" />

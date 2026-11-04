@@ -17,11 +17,11 @@ export default function Hero() {
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             Talk it out.
             <br />
-            <span className="text-gradient">Find your mojo.</span>
+            <span className="text-gradient">Find your MOJO.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-soft lg:mx-0">
-            Just say how your day went. Mojo turns it into a journal entry, logs your mood, sleep and activity, and
+            Just say how your day went. MOJO turns it into a journal entry, logs your mood, sleep and activity, and
             shows you what really lifts your energy. No forms, no typing.
           </p>
 

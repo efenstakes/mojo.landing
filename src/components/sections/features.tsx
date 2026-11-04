@@ -25,7 +25,7 @@ export default function Features() {
             Your journal, <span className="text-gradient">out loud</span>
           </>
         }
-        text="Some days you don't have the words to type. Just talk. Mojo keeps your recording, writes up a clean journal entry, and picks out the mood and moments that mattered, so looking back is as easy as scrolling."
+        text="Some days you don't have the words to type. Just talk. MOJO keeps your recording, writes up a clean journal entry, and picks out the mood and moments that mattered, so looking back is as easy as scrolling."
         features={[
           { label: "Speak instead of typing", Icon: MicIcon },
           { label: "Transcribed on your phone", Icon: SparkIcon },
@@ -43,7 +43,7 @@ export default function Features() {
             See how your nights <span className="text-gradient">shape your days</span>
           </>
         }
-        text="Log your mood with a tap and last night's sleep in a second. Mojo charts both side by side and points out the patterns that are easy to miss, like how much brighter you feel after a full night."
+        text="Log your mood with a tap and last night's sleep in a second. MOJO charts both side by side and points out the patterns that are easy to miss, like how much brighter you feel after a full night."
         features={[
           { label: "One-tap mood check-ins", Icon: SmileIcon },
           { label: "Sleep hours & quality", Icon: MoonIcon },
@@ -60,7 +60,7 @@ export default function Features() {
             Every walk <span className="text-gradient">counts</span>
           </>
         }
-        text="A stroll at lunch, a yoga class, a dance in the kitchen. Log it in seconds and watch your active days add up. Mojo shows which kinds of movement actually do the most for your mood."
+        text="A stroll at lunch, a yoga class, a dance in the kitchen. Log it in seconds and watch your active days add up. MOJO shows which kinds of movement actually do the most for your mood."
         features={[
           { label: "Log any activity", Icon: RunIcon },
           { label: "Active days & minutes", Icon: ChartIcon },

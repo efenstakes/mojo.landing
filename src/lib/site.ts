@@ -2,7 +2,7 @@
  * Every external link, URL and contact detail on the site, in one place.
  *
  * NEXT_PUBLIC_SITE_URL is the public address of this site, including any
- * sub-path. It defaults to https://heylixir.com/mojo -- the address the Mojo
+ * sub-path. It defaults to https://heylixir.com/mojo -- the address the MOJO
  * API already uses in its emails (privacy, unsubscribe). next.config.ts
  * derives `basePath` from the same value, so canonical URLs, the sitemap and
  * routing always agree.
@@ -25,16 +25,16 @@ export function absoluteUrl(path = "/"): string {
 }
 
 export const site = {
-  name: "Mojo",
-  legalName: "Mojo by Heylixir",
+  name: "MOJO",
+  legalName: "MOJO by Heylixir",
   url: siteUrl,
-  tagline: "Talk it out. Feel it out. Find your mojo.",
+  tagline: "Talk it out. Feel it out. Find your MOJO.",
   description:
-    "Mojo is a voice journal and mood tracker. Say how your day went and Mojo logs your mood, sleep and activity, then shows you what lifts your energy.",
+    "MOJO is a voice journal and mood tracker. Say how your day went and MOJO logs your mood, sleep and activity, then shows you what lifts your energy.",
   /** Store links. Empty until listed: store buttons then show "Coming soon" and the waitlist leads instead. */
   appStoreUrl: process.env.NEXT_PUBLIC_APP_STORE_URL ?? "",
   playStoreUrl: process.env.NEXT_PUBLIC_PLAY_STORE_URL ?? "",
-  /** The Mojo API (GraphQL at `${apiUrl}/api`), used for waitlist signups and unsubscribes. */
+  /** The MOJO API (GraphQL at `${apiUrl}/api`), used for waitlist signups and unsubscribes. */
   apiUrl: (process.env.NEXT_PUBLIC_MOJO_API_URL ?? "").replace(/\/+$/, ""),
   /** Public launch moment (ISO 8601). Drives the countdown and the pre-launch waitlist UI. */
   launchDate: process.env.NEXT_PUBLIC_LAUNCH_DATE ?? "2026-12-01T00:00:00Z",

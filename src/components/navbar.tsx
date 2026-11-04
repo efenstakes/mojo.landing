@@ -28,7 +28,7 @@ export default function Navbar() {
         }`}
         aria-label="Main"
       >
-        <Link href="/" className="flex items-center gap-2" aria-label="Mojo home">
+        <Link href="/" className="flex items-center gap-2" aria-label="MOJO home">
           <Logo />
         </Link>
 

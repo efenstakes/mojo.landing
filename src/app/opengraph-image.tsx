@@ -7,12 +7,12 @@ export const contentType = "image/png";
 export function generateStaticParams() {
   return [{}];
 }
-export const alt = "Mojo: talk it out, find your mojo";
+export const alt = "MOJO: talk it out, find your MOJO";
 
 export default function Image() {
   return ogImage({
     kicker: "Voice journal & mood tracker",
-    title: "Talk it out. Find your mojo.",
+    title: "Talk it out. Find your MOJO.",
     footer: "Log mood, sleep and activity in a 30-second voice check-in.",
   });
 }

@@ -9,7 +9,7 @@ const steps = [
   {
     Icon: SparkIcon,
     title: "Halo fills in the details",
-    text: "Mojo's AI pulls out your mood, what lifted or weighed on it, how you slept and what you did. You review it, tweak anything, and save.",
+    text: "MOJO's AI pulls out your mood, what lifted or weighed on it, how you slept and what you did. You review it, tweak anything, and save.",
   },
   {
     Icon: ChartIcon,

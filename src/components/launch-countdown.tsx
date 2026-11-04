@@ -28,7 +28,7 @@ export default function LaunchCountdown({ tone = "dark", className = "" }: Props
   const light = tone === "light";
 
   return (
-    <div className={className} role="timer" aria-label={`Mojo launches on ${launchLabel}`}>
+    <div className={className} role="timer" aria-label={`MOJO launches on ${launchLabel}`}>
       <p className={`text-xs font-bold uppercase tracking-widest ${light ? "text-white/85" : "text-violet-deep"}`}>
         Launching {launchLabel} · iOS &amp; Android
       </p>

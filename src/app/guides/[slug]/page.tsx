@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps<"/guides/[slug]">):
     description: guide.description,
     keywords: guide.keywords,
     alternates: { canonical: url },
-    authors: [{ name: "The Mojo team", url: absoluteUrl("/") }],
+    authors: [{ name: "The MOJO team", url: absoluteUrl("/") }],
     openGraph: {
       type: "article",
       url,
@@ -74,7 +74,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       url,
       image: absoluteUrl(`/guides/${guide.slug}/opengraph-image`),
-      author: { "@type": "Organization", name: "The Mojo team", url: absoluteUrl("/") },
+      author: { "@type": "Organization", name: "The MOJO team", url: absoluteUrl("/") },
       publisher,
       inLanguage: "en",
       timeRequired: `PT${minutes}M`,
@@ -136,7 +136,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           <header className="mt-6">
             <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl">{guide.title}</h1>
             <p className="mt-4 text-sm text-ink-soft">
-              By the Mojo team · Updated <time dateTime={guide.updated}>{dateFmt.format(new Date(guide.updated))}</time>{" "}
+              By the MOJO team · Updated <time dateTime={guide.updated}>{dateFmt.format(new Date(guide.updated))}</time>{" "}
               · {minutes} min read
             </p>
           </header>
@@ -257,7 +257,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
             See your own patterns in 30 seconds a day
           </h2>
           <p className="relative mx-auto mt-3 max-w-xl text-white/90">
-            Tell Mojo how your day went. It logs your mood, sleep and activity and shows you what lifts your energy.
+            Tell MOJO how your day went. It logs your mood, sleep and activity and shows you what lifts your energy.
           </p>
           <div className="relative mt-6 flex flex-col items-center gap-4">
             <LaunchCountdown tone="light" className="flex flex-col items-center" />

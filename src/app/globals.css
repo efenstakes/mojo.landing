@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /*
- * Mojo brand tokens.
- * Same family as the Mojo app (its primaryLight violet, tealish green and
+ * MOJO brand tokens.
+ * Same family as the MOJO app (its primaryLight violet, tealish green and
  * amber), arranged differently from Heylixir: violet -> teal instead of
  * purple -> orange, with amber only as an accent.
  */
@@ -54,7 +54,7 @@ body {
   color: var(--color-ink);
 }
 
-/* violet -> teal gradient text, Mojo's signature (Heylixir used purple -> orange) */
+/* violet -> teal gradient text, MOJO's signature (Heylixir used purple -> orange) */
 @utility text-gradient {
   background-image: linear-gradient(120deg, var(--color-violet-deep), var(--color-violet) 40%, var(--color-teal));
   -webkit-background-clip: text;

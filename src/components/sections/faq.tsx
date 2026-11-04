@@ -2,12 +2,12 @@ import { PlusIcon } from "@/components/icons";
 
 export const faqs = [
   {
-    q: "When does Mojo launch?",
-    a: "Mojo launches on iOS and Android on 1 December 2026. Join the list and we'll email you the moment it's live.",
+    q: "When does MOJO launch?",
+    a: "MOJO launches on iOS and Android on 1 December 2026. Join the list and we'll email you the moment it's live.",
   },
   {
-    q: "What is Mojo?",
-    a: "Mojo is a wellness journal you can talk to. You say how your day went, and Mojo logs your mood, sleep and activity, then shows you the patterns behind your best days.",
+    q: "What is MOJO?",
+    a: "MOJO is a wellness journal you can talk to. You say how your day went, and MOJO logs your mood, sleep and activity, then shows you the patterns behind your best days.",
   },
   {
     q: "Do I have to talk? Can I type instead?",
@@ -18,16 +18,16 @@ export const faqs = [
     a: "It's Halo's estimate of your energy today, from 0 to 100, based on your recent mood, sleep and activity. It comes with the factors behind it, so you can see what's helping and what's draining you. It needs about a week of check-ins to get going.",
   },
   {
-    q: "Is Mojo a medical app?",
-    a: "No. Mojo is for everyday wellbeing: understanding your moods, sleep and habits. It doesn't diagnose anything or give medical advice. If you're struggling, please reach out to a professional.",
+    q: "Is MOJO a medical app?",
+    a: "No. MOJO is for everyday wellbeing: understanding your moods, sleep and habits. It doesn't diagnose anything or give medical advice. If you're struggling, please reach out to a professional.",
   },
   {
     q: "Who can see my journal?",
-    a: "Only you. Your journal is private unless you choose to share something in the community, and you can lock the app with Mojo Pass.",
+    a: "Only you. Your journal is private unless you choose to share something in the community, and you can lock the app with MOJO Pass.",
   },
   {
     q: "How much does it cost?",
-    a: "Mojo is free to start. A Pro plan unlocks unlimited check-ins, deeper Halo insights and more.",
+    a: "MOJO is free to start. A Pro plan unlocks unlimited check-ins, deeper Halo insights and more.",
   },
 ];
 

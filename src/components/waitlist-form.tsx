@@ -16,7 +16,7 @@ type Status = "idle" | "sending" | "done" | "error";
 const MUTATION = "mutation NotifyOnLaunch($input: AddLaunchNotificationInput!) { notifyOnLaunch(input: $input) }";
 
 /**
- * Launch waitlist. Posts to the Mojo API's `notifyOnLaunch` mutation, which stores the email and
+ * Launch waitlist. Posts to the MOJO API's `notifyOnLaunch` mutation, which stores the email and
  * sends a confirmation with an unsubscribe link. Without NEXT_PUBLIC_MOJO_API_URL it falls back to
  * an email to the team so the form never dead-ends.
  */
@@ -30,7 +30,7 @@ export default function WaitlistForm({ source, tone = "dark", className = "" }: 
     if (!value) return;
 
     if (!site.apiUrl) {
-      window.location.href = `mailto:${site.supportEmail}?subject=${encodeURIComponent("Tell me when Mojo launches")}&body=${encodeURIComponent(`Please add ${value} to the Mojo launch list.`)}`;
+      window.location.href = `mailto:${site.supportEmail}?subject=${encodeURIComponent("Tell me when MOJO launches")}&body=${encodeURIComponent(`Please add ${value} to the MOJO launch list.`)}`;
       track("generate_lead", { method: "mailto", source });
       setStatus("done");
       return;
@@ -41,7 +41,7 @@ export default function WaitlistForm({ source, tone = "dark", className = "" }: 
       const res = await fetch(`${site.apiUrl}/api`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: MUTATION, variables: { input: { email: value } } }),
+        body: JSON.stringify({ query: MUTATION, variables: { input: { email: value, source: source.slice(0, 120) } } }),
       });
       const json = (await res.json()) as { data?: { notifyOnLaunch?: boolean }; errors?: unknown[] };
       if (!res.ok || json.errors?.length || !json.data?.notifyOnLaunch) throw new Error("rejected");
@@ -57,13 +57,13 @@ export default function WaitlistForm({ source, tone = "dark", className = "" }: 
   if (status === "done") {
     return (
       <p role="status" className={`rounded-2xl px-5 py-4 text-sm font-semibold ${light ? "bg-white/20 text-white" : "glass text-ink"} ${className}`}>
-        You&apos;re on the list. We&apos;ll email you the moment Mojo is live.
+        You&apos;re on the list. We&apos;ll email you the moment MOJO is live.
       </p>
     );
   }
 
   return (
-    <form onSubmit={onSubmit} className={`w-full max-w-md ${className}`} aria-label="Get notified when Mojo launches">
+    <form onSubmit={onSubmit} className={`w-full max-w-md ${className}`} aria-label="Get notified when MOJO launches">
       <div className={`flex flex-col gap-2 rounded-3xl p-1.5 sm:flex-row sm:rounded-full ${light ? "bg-white/20" : "glass"}`}>
         <label htmlFor={`email-${source}`} className="sr-only">
           Email address

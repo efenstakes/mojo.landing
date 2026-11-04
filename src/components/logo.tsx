@@ -1,4 +1,4 @@
-/** Mojo wordmark: a soft spark mark + name. */
+/** MOJO wordmark: a soft spark mark + name. */
 export default function Logo({ light = false }: { light?: boolean }) {
   return (
     <span className="flex items-center gap-2">
@@ -7,7 +7,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
           <path d="M12 2.5l2.2 6.3 6.3 2.2-6.3 2.2L12 19.5l-2.2-6.3L3.5 11l6.3-2.2z" />
         </svg>
       </span>
-      <span className={`text-xl font-extrabold tracking-tight ${light ? "text-white" : "text-ink"}`}>mojo</span>
+      <span className={`text-xl font-extrabold tracking-wide ${light ? "text-white" : "text-ink"}`}>MOJO</span>
     </span>
   );
 }

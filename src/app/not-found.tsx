@@ -10,7 +10,7 @@ export default function NotFound() {
         <div className="flex justify-center">
           <Logo />
         </div>
-        <h1 className="mt-6 text-3xl font-extrabold">Lost your mojo?</h1>
+        <h1 className="mt-6 text-3xl font-extrabold">Lost your MOJO?</h1>
         <p className="mt-3 text-ink-soft">This page doesn&apos;t exist. Let&apos;s get you back on track.</p>
         <Link href="/" className="mt-6 inline-flex rounded-full bg-ink px-6 py-3 font-bold text-white hover:bg-violet-deep">
           Back home

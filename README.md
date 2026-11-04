@@ -1,6 +1,6 @@
-# Mojo landing page
+# MOJO landing page
 
-Marketing site for **Mojo**, the voice-first wellness journal (mood, sleep,
+Marketing site for **MOJO**, the voice-first wellness journal (mood, sleep,
 activities and Halo AI insights). Built with Next.js 16 (App Router, Cache
 Components) and Tailwind CSS 4. Fully static.
 
@@ -26,14 +26,14 @@ npm run lint
 - Set `appStoreUrl` / `playStoreUrl` in `src/lib/site.ts`. Until then the store
   buttons say "Coming soon" and don't link anywhere.
 - Set `termsUrl` (the Terms link is hidden while it's empty) and confirm
-  `privacyUrl` points at Mojo's privacy policy.
+  `privacyUrl` points at MOJO's privacy policy.
 - Mockup numbers are illustrative example data, not real users.
 
 ## Design
 
 Same family as the Heylixir site (frosted cards over a soft animated
 background, big gradient headlines, alternating feature sections with icon
-chips) but its own look: Mojo's violet → teal gradient instead of purple →
+chips) but its own look: MOJO's violet → teal gradient instead of purple →
 orange, Plus Jakarta Sans instead of Lato, and app-screen mockups instead of
 photos.
 
@@ -52,7 +52,7 @@ photos.
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public URL, e.g. `https://heylixir.com/mojo` (sets basePath and canonicals) |
-| `NEXT_PUBLIC_MOJO_API_URL` | Mojo API origin for the launch waitlist (`notifyOnLaunch`). Without it the form falls back to email. |
+| `NEXT_PUBLIC_MOJO_API_URL` | MOJO API origin for the launch waitlist (`notifyOnLaunch`). Without it the form falls back to email. |
 | `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL` | Store links. While both are unset the site shows the waitlist form. |
 | `NEXT_PUBLIC_LAUNCH_DATE` | Launch moment for the countdown, ISO 8601 (default `2026-12-01T00:00:00Z`) |
 | `NEXT_PUBLIC_GA_ID` | GA4 measurement ID; waitlist sign-ups send a `generate_lead` event |

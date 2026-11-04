@@ -7,7 +7,7 @@ import WaitlistForm from "@/components/waitlist-form";
 import { track } from "@/lib/analytics";
 import { launchLabel, WAITLIST_EVENT } from "@/lib/launch";
 
-/** One shared "join the list" dialog, opened by store buttons and "Get Mojo" before launch. */
+/** One shared "join the list" dialog, opened by store buttons and "Get MOJO" before launch. */
 export default function WaitlistDialog() {
   const ref = useRef<HTMLDialogElement>(null);
   const [source, setSource] = useState("dialog");
@@ -43,11 +43,11 @@ export default function WaitlistDialog() {
         </button>
         <p className="text-xs font-bold uppercase tracking-widest text-teal-deep">Almost here</p>
         <h2 id="waitlist-title" className="mt-2 text-3xl font-extrabold tracking-tight">
-          Mojo lands on {launchLabel}
+          MOJO lands on {launchLabel}
         </h2>
         <p className="mt-3 leading-relaxed text-ink-soft">
           We&apos;re not in the App Store or Google Play just yet. Join the list and we&apos;ll email you the moment
-          Mojo is live on iOS and Android.
+          MOJO is live on iOS and Android.
         </p>
         <LaunchCountdown className="mt-6" />
         <WaitlistForm key={source} source={source} className="mt-6" />

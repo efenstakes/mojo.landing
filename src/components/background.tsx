@@ -1,5 +1,5 @@
 /**
- * Soft drifting colour blobs behind the whole page -- Mojo's take on
+ * Soft drifting colour blobs behind the whole page -- MOJO's take on
  * Heylixir's animated 3D background, done in CSS so it costs nothing to load.
  */
 export default function Background() {

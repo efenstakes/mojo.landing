@@ -13,7 +13,7 @@ export default function Cta() {
           Thirty seconds a day. A clearer picture of you.
         </h2>
         <p className="relative mx-auto mt-5 max-w-xl text-lg text-white/90">
-          Start with today. Tell Mojo how it went, and let your patterns do the rest.
+          Start with today. Tell MOJO how it went, and let your patterns do the rest.
         </p>
         {!storesLive && (
           <div className="relative mt-8 flex flex-col items-center gap-6">

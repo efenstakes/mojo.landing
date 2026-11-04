@@ -5,12 +5,12 @@ import { openWaitlist, storesLive } from "@/lib/launch";
 
 type Props = { className: string; source: string; onDone?: () => void };
 
-/** "Get Mojo": jumps to the download buttons once live, otherwise opens the waitlist. */
+/** "Get MOJO": jumps to the download buttons once live, otherwise opens the waitlist. */
 export default function GetMojoButton({ className, source, onDone }: Props) {
   if (storesLive) {
     return (
       <Link href="/#download" className={className} onClick={onDone}>
-        Get Mojo
+        Get MOJO
       </Link>
     );
   }
@@ -23,7 +23,7 @@ export default function GetMojoButton({ className, source, onDone }: Props) {
         openWaitlist(source);
       }}
     >
-      Get Mojo
+      Get MOJO
     </button>
   );
 }

@@ -38,7 +38,7 @@ export function ogImage({ kicker, title, footer }: { kicker: string; title: stri
           >
             {spark}
           </div>
-          <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: -1 }}>mojo</div>
+          <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: 1 }}>MOJO</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ fontSize: 26, fontWeight: 700, color: "#2f8a72", textTransform: "uppercase", letterSpacing: 3 }}>

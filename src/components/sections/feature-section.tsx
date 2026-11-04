@@ -14,7 +14,7 @@ type Props = {
 
 /**
  * One alternating "experience" block: copy + feature chips on one side, an
- * app screen on the other. Mojo's take on the Heylixir landing's section
+ * app screen on the other. MOJO's take on the Heylixir landing's section
  * layout -- rounder, lighter, with app mockups instead of photos.
  */
 export default function FeatureSection({ id, eyebrow, title, text, features, visual, reverse = false }: Props) {
