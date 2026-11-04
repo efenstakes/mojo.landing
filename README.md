@@ -52,7 +52,7 @@ photos.
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public URL, e.g. `https://heylixir.com/mojo` (sets basePath and canonicals) |
-| `NEXT_PUBLIC_MOJO_API_URL` | MOJO API origin for the launch waitlist (`notifyOnLaunch`). Without it the form falls back to email. |
+| `NEXT_PUBLIC_MOJO_API_URL` | MOJO API origin for the launch waitlist (`POST /v1/launch-notifications`). Without it the form falls back to email. |
 | `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL` | Store links. While both are unset the site shows the waitlist form. |
 | `NEXT_PUBLIC_LAUNCH_DATE` | Launch moment for the countdown, ISO 8601 (default `2026-12-01T00:00:00Z`) |
 | `NEXT_PUBLIC_GA_ID` | GA4 measurement ID; waitlist sign-ups send a `generate_lead` event |

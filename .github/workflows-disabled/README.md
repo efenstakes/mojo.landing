@@ -16,7 +16,7 @@ On every push to `main` (or a manual run), this workflow:
 1. In the repo's **Settings → Secrets and variables → Actions**, add:
    - Secrets: `FTP_HOST`, `FTP_USERNAME`, `FTP_PASSWORD` (same FTP account as heylixir.inc.landing).
    - Variables:
-     - `NEXT_PUBLIC_MOJO_API_URL` (required for the waitlist form, e.g. `https://api.example.com`, no `/api`).
+     - `NEXT_PUBLIC_MOJO_API_URL` (required for the waitlist form, e.g. `https://api.example.com`, without `/v1`).
      - Optional: `NEXT_PUBLIC_SITE_URL` (default `https://heylixir.com/mojo`), `FTP_SERVER_DIR`
        (default `/mojo/`), `FTP_PROTOCOL` (default `ftps`; use `ftp` if your host has no FTPS).
      - Optional: `NEXT_PUBLIC_LAUNCH_DATE` (countdown target, default `2026-12-01T00:00:00Z`),

@@ -7,8 +7,6 @@ import { site } from "@/lib/site";
 
 type Status = "idle" | "working" | "done" | "error";
 
-const QUERY = "query Unsubscribe($id: String!) { unsubscribeFromLaunchNotifications(id: $id) }";
-
 /** Handles the unsubscribe link from launch-list emails (?id=...). Asks before acting, so link scanners can't unsubscribe people. */
 export default function Unsubscribe() {
   const id = useSearchParams().get("id");
@@ -18,13 +16,9 @@ export default function Unsubscribe() {
     if (!id || !site.apiUrl) return setStatus("error");
     setStatus("working");
     try {
-      const res = await fetch(`${site.apiUrl}/api`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: QUERY, variables: { id } }),
-      });
-      const json = (await res.json()) as { errors?: unknown[] };
-      if (!res.ok || json.errors?.length) throw new Error("failed");
+      const res = await fetch(`${site.apiUrl}/v1/launch-notifications/${encodeURIComponent(id)}`, { method: "DELETE" });
+      const done = (await res.json().catch(() => null)) as boolean | null;
+      if (!res.ok || done !== true) throw new Error("failed");
       setStatus("done");
     } catch {
       setStatus("error");

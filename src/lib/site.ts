@@ -34,7 +34,7 @@ export const site = {
   /** Store links. Empty until listed: store buttons then show "Coming soon" and the waitlist leads instead. */
   appStoreUrl: process.env.NEXT_PUBLIC_APP_STORE_URL ?? "",
   playStoreUrl: process.env.NEXT_PUBLIC_PLAY_STORE_URL ?? "",
-  /** The MOJO API (GraphQL at `${apiUrl}/api`), used for waitlist signups and unsubscribes. */
+  /** The MOJO REST API origin (`${apiUrl}/v1/...`), used for waitlist signups and unsubscribes. */
   apiUrl: (process.env.NEXT_PUBLIC_MOJO_API_URL ?? "").replace(/\/+$/, ""),
   /** Public launch moment (ISO 8601). Drives the countdown and the pre-launch waitlist UI. */
   launchDate: process.env.NEXT_PUBLIC_LAUNCH_DATE ?? "2026-12-01T00:00:00Z",

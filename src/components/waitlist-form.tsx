@@ -13,10 +13,8 @@ type Props = {
 
 type Status = "idle" | "sending" | "done" | "error";
 
-const MUTATION = "mutation NotifyOnLaunch($input: AddLaunchNotificationInput!) { notifyOnLaunch(input: $input) }";
-
 /**
- * Launch waitlist. Posts to the MOJO API's `notifyOnLaunch` mutation, which stores the email and
+ * Launch waitlist. POSTs to the MOJO API (`POST /v1/launch-notifications`), which stores the email and
  * sends a confirmation with an unsubscribe link. Without NEXT_PUBLIC_MOJO_API_URL it falls back to
  * an email to the team so the form never dead-ends.
  */
@@ -38,13 +36,13 @@ export default function WaitlistForm({ source, tone = "dark", className = "" }: 
 
     setStatus("sending");
     try {
-      const res = await fetch(`${site.apiUrl}/api`, {
+      const res = await fetch(`${site.apiUrl}/v1/launch-notifications`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: MUTATION, variables: { input: { email: value, source: source.slice(0, 120) } } }),
+        body: JSON.stringify({ email: value, source: source.slice(0, 120) }),
       });
-      const json = (await res.json()) as { data?: { notifyOnLaunch?: boolean }; errors?: unknown[] };
-      if (!res.ok || json.errors?.length || !json.data?.notifyOnLaunch) throw new Error("rejected");
+      const saved = (await res.json().catch(() => null)) as boolean | { error?: string } | null;
+      if (!res.ok || saved !== true) throw new Error("rejected");
       track("generate_lead", { method: "waitlist", source });
       setStatus("done");
     } catch {
