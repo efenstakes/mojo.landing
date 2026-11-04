@@ -36,6 +36,8 @@ export const site = {
   playStoreUrl: process.env.NEXT_PUBLIC_PLAY_STORE_URL ?? "",
   /** The Mojo API (GraphQL at `${apiUrl}/api`), used for waitlist signups and unsubscribes. */
   apiUrl: (process.env.NEXT_PUBLIC_MOJO_API_URL ?? "").replace(/\/+$/, ""),
+  /** Public launch moment (ISO 8601). Drives the countdown and the pre-launch waitlist UI. */
+  launchDate: process.env.NEXT_PUBLIC_LAUNCH_DATE ?? "2026-12-01T00:00:00Z",
   supportEmail: "mojo@heylixir.com",
   twitterHandle: process.env.NEXT_PUBLIC_TWITTER_HANDLE ?? "",
   /** Google Analytics 4 measurement ID (G-XXXX). Analytics only loads when this is set. */
@@ -51,4 +53,5 @@ export const navLinks = [
   { href: "/#features", label: "Features" },
   { href: "/#halo", label: "Halo AI" },
   { href: "/guides", label: "Guides" },
+  { href: "/about", label: "About" },
 ] as const;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import GuideCard from "@/components/guide-card";
 import PageShell from "@/components/page-shell";
 import JsonLd from "@/components/seo/json-ld";
+import LaunchCountdown from "@/components/launch-countdown";
 import WaitlistForm from "@/components/waitlist-form";
 import { categories, guides, guidesIn } from "@/content/guides";
 import { absoluteUrl, site } from "@/lib/site";
@@ -111,6 +112,7 @@ export default function GuidesPage() {
             Mojo turns a quick voice check-in into your mood, sleep and activity log, and shows you what lifts your
             energy. Get an email the day it launches.
           </p>
+          <LaunchCountdown className="mt-6 flex flex-col items-center" />
           <WaitlistForm source="guides-hub" className="mt-6" />
         </div>
       </section>

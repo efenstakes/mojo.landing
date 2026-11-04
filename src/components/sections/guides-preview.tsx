@@ -7,7 +7,7 @@ const picks = [
   "managing-mental-health-working-9-to-5",
   "managing-mental-health-at-university",
   "best-mental-health-apps-for-students",
-  "signs-of-burnout-at-work",
+  "how-to-recover-from-burnout",
   "voice-journaling-guide",
   "how-sleep-affects-mood",
 ];

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CloseIcon, MenuIcon } from "@/components/icons";
+import GetMojoButton from "@/components/get-mojo-button";
 import Logo from "@/components/logo";
 import { navLinks } from "@/lib/site";
 
@@ -41,12 +42,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <Link
-          href="/#download"
-          className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-white transition hover:bg-violet-deep md:inline-flex"
-        >
-          Get Mojo
-        </Link>
+        <GetMojoButton source="nav" className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-white transition hover:bg-violet-deep md:inline-flex" />
 
         <button
           type="button"
@@ -75,13 +71,7 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <Link
-                href="/#download"
-                onClick={() => setOpen(false)}
-                className="mt-2 block rounded-2xl bg-ink px-4 py-3 text-center text-base font-bold text-white"
-              >
-                Get Mojo
-              </Link>
+              <GetMojoButton source="nav-mobile" onDone={() => setOpen(false)} className="w-full mt-2 block rounded-2xl bg-ink px-4 py-3 text-center text-base font-bold text-white" />
             </li>
           </ul>
         </div>

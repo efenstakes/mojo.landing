@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import GuideCard from "@/components/guide-card";
 import { CheckIcon, PlusIcon } from "@/components/icons";
 import PageShell from "@/components/page-shell";
+import LaunchCountdown from "@/components/launch-countdown";
 import JsonLd from "@/components/seo/json-ld";
 import StoreButtons from "@/components/store-buttons";
 import WaitlistForm from "@/components/waitlist-form";
@@ -259,6 +260,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
             Tell Mojo how your day went. It logs your mood, sleep and activity and shows you what lifts your energy.
           </p>
           <div className="relative mt-6 flex flex-col items-center gap-4">
+            <LaunchCountdown tone="light" className="flex flex-col items-center" />
             <WaitlistForm source={`guide:${guide.slug}`} tone="light" />
             <StoreButtons tone="light" className="justify-center" />
           </div>

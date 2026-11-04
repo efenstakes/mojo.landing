@@ -11,8 +11,8 @@ const featuredGuides = [
   "managing-mental-health-at-university",
   "best-mental-health-apps-for-students",
   "best-mental-health-apps-for-9-to-5-workers",
-  "best-mood-tracker-apps",
-  "voice-journaling-guide",
+  "signs-of-burnout-at-work",
+  "how-to-recover-from-burnout",
 ]
   .map((slug) => guides.find((g) => g.slug === slug))
   .filter((g) => g !== undefined);
@@ -26,6 +26,7 @@ const product = [
 ];
 
 const company = [
+  { href: "/about", label: "About" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
   { href: "/delete-account", label: "Delete your account" },

@@ -1,4 +1,4 @@
-export type GuideCategory = "Work" | "University" | "Journaling" | "Sleep & energy" | "App guides";
+export type GuideCategory = "Work" | "Burnout" | "University" | "Journaling" | "Sleep & energy" | "App guides";
 
 export type GuideSection = {
   heading: string;

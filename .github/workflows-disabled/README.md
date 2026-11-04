@@ -19,7 +19,8 @@ On every push to `main` (or a manual run), this workflow:
      - `NEXT_PUBLIC_MOJO_API_URL` (required for the waitlist form, e.g. `https://api.example.com`, no `/api`).
      - Optional: `NEXT_PUBLIC_SITE_URL` (default `https://heylixir.com/mojo`), `FTP_SERVER_DIR`
        (default `/mojo/`), `FTP_PROTOCOL` (default `ftps`; use `ftp` if your host has no FTPS).
-     - Optional: `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL`, `NEXT_PUBLIC_GA_ID`,
+     - Optional: `NEXT_PUBLIC_LAUNCH_DATE` (countdown target, default `2026-12-01T00:00:00Z`),
+       `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL`, `NEXT_PUBLIC_GA_ID`,
        `NEXT_PUBLIC_TWITTER_HANDLE`, `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`,
        `NEXT_PUBLIC_BING_SITE_VERIFICATION`.
 2. Create a `production` environment (Settings → Environments) if you want approvals before deploys.

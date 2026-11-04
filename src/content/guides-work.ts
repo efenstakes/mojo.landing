@@ -95,7 +95,7 @@ export const workGuides: Guide[] = [
   },
   {
     slug: "signs-of-burnout-at-work",
-    category: "Work",
+    category: "Burnout",
     title: "Signs of burnout at work, and what to do about them",
     metaTitle: "Signs of Burnout at Work and How to Recover",
     description:
@@ -175,7 +175,7 @@ export const workGuides: Guide[] = [
         a: "Yes, as an early-warning tool. Logging mood, sleep and energy daily shows trends you'd otherwise miss, so you can act before it gets worse. It doesn't replace professional help.",
       },
     ],
-    related: ["managing-mental-health-working-9-to-5", "why-am-i-always-tired", "how-to-decompress-after-work"],
+    related: ["how-to-recover-from-burnout", "burnout-vs-stress", "how-to-prevent-burnout"],
   },
   {
     slug: "how-to-decompress-after-work",

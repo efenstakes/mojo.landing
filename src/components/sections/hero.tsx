@@ -1,10 +1,9 @@
 import { MicIcon, MoonIcon, RunIcon, SmileIcon } from "@/components/icons";
 import { VoiceCheckinScreen } from "@/components/mockups/screens";
 import StoreButtons from "@/components/store-buttons";
+import LaunchCountdown from "@/components/launch-countdown";
 import WaitlistForm from "@/components/waitlist-form";
-import { site } from "@/lib/site";
-
-const launched = Boolean(site.appStoreUrl || site.playStoreUrl);
+import { storesLive } from "@/lib/launch";
 
 export default function Hero() {
   return (
@@ -27,7 +26,8 @@ export default function Hero() {
           </p>
 
           <div id="download" className="mt-8 flex flex-col items-center gap-4 lg:items-start">
-            {!launched && <WaitlistForm source="hero" />}
+            {!storesLive && <LaunchCountdown />}
+            {!storesLive && <WaitlistForm source="hero" />}
             <StoreButtons />
             <p className="text-sm text-ink-soft">Free to start. Takes about 30 seconds a day.</p>
           </div>

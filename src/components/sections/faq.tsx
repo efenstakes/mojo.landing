@@ -2,6 +2,10 @@ import { PlusIcon } from "@/components/icons";
 
 export const faqs = [
   {
+    q: "When does Mojo launch?",
+    a: "Mojo launches on iOS and Android on 1 December 2026. Join the list and we'll email you the moment it's live.",
+  },
+  {
     q: "What is Mojo?",
     a: "Mojo is a wellness journal you can talk to. You say how your day went, and Mojo logs your mood, sleep and activity, then shows you the patterns behind your best days.",
   },

@@ -66,7 +66,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Seeing what drains you at work",
-        "Say how your day went in about 30 seconds and Mojo turns it into a journal entry, logs your mood, sleep and activity, and shows patterns like your hardest weekday or how short nights affect your focus. Launching soon on iOS and Android.",
+        "Say how your day went in about 30 seconds and Mojo turns it into a journal entry, logs your mood, sleep and activity, and shows patterns like your hardest weekday or how short nights affect your focus. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "Headspace",
@@ -161,7 +161,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Seeing how sleep and routine affect your mood",
-        "Talk for 30 seconds about your day and Mojo logs your mood, sleep and activity, then points out patterns like better days after seven-plus hours of sleep or when you leave your room before noon. Launching soon on iOS and Android.",
+        "Talk for 30 seconds about your day and Mojo logs your mood, sleep and activity, then points out patterns like better days after seven-plus hours of sleep or when you leave your room before noon. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "How We Feel",
@@ -254,7 +254,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Logging by voice, with sleep and activity included",
-        "Speak for about 30 seconds and Mojo logs your mood, sleep and activity from what you said, keeps it as a journal entry, and shows patterns plus a daily energy score once it has about a week of check-ins. Launching soon on iOS and Android.",
+        "Speak for about 30 seconds and Mojo logs your mood, sleep and activity from what you said, keeps it as a journal entry, and shows patterns plus a daily energy score once it has about a week of check-ins. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "Daylio",
@@ -339,7 +339,7 @@ export const appGuides: Guide[] = [
     apps: [
       mojo(
         "Voice journaling",
-        "Just talk about your day. Mojo transcribes it into a journal entry, picks out your mood, sleep and activity, and helps you see patterns across weeks. You can type too. Launching soon on iOS and Android.",
+        "Just talk about your day. Mojo transcribes it into a journal entry, picks out your mood, sleep and activity, and helps you see patterns across weeks. You can type too. Launching on iOS and Android on 1 December 2026.",
       ),
       {
         name: "Day One",
