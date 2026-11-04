@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CloseIcon, MenuIcon } from "@/components/icons";
 import Logo from "@/components/logo";
@@ -26,26 +27,26 @@ export default function Navbar() {
         }`}
         aria-label="Main"
       >
-        <a href="#top" className="flex items-center gap-2" aria-label="Mojo home">
+        <Link href="/" className="flex items-center gap-2" aria-label="Mojo home">
           <Logo />
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="text-sm font-semibold text-ink-soft transition hover:text-ink">
+              <Link href={l.href} className="text-sm font-semibold text-ink-soft transition hover:text-ink">
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        <a
-          href="#download"
+        <Link
+          href="/#download"
           className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-white transition hover:bg-violet-deep md:inline-flex"
         >
           Get Mojo
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -64,23 +65,23 @@ export default function Navbar() {
           <ul className="flex flex-col">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a
+                <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className="block rounded-2xl px-4 py-3 text-base font-semibold text-ink hover:bg-white"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>
-              <a
-                href="#download"
+              <Link
+                href="/#download"
                 onClick={() => setOpen(false)}
                 className="mt-2 block rounded-2xl bg-ink px-4 py-3 text-center text-base font-bold text-white"
               >
                 Get Mojo
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { site } from "@/lib/site";
+import Script from "next/script";
+import { absoluteUrl, site } from "@/lib/site";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -9,34 +10,58 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const defaultTitle = "Mojo: Voice Journal & Mood Tracker for Sleep and Energy";
+
 export const metadata: Metadata = {
+  // Includes the base path (e.g. /mojo): Next joins relative metadata URLs, including generated
+  // OG images, onto this pathname. Canonical and OG page URLs are absolute via absoluteUrl().
   metadataBase: new URL(site.url),
-  title: {
-    default: "Mojo — voice journaling for your mood, sleep & energy",
-    template: "%s · Mojo",
-  },
+  title: { default: defaultTitle, template: "%s · Mojo" },
   description: site.description,
   applicationName: site.name,
+  creator: site.legalName,
+  publisher: site.legalName,
+  category: "health & fitness",
   keywords: [
-    "voice journal",
-    "mood tracker",
-    "sleep tracker",
-    "activity tracker",
+    "voice journal app",
+    "mood tracker app",
+    "mood journal",
+    "sleep and mood tracker",
     "wellness app",
-    "energy score",
+    "mental health app",
     "journaling app",
-    "Mojo",
+    "energy tracker",
+    "Mojo app",
   ],
+  alternates: { canonical: absoluteUrl("/") },
   openGraph: {
     type: "website",
+    url: absoluteUrl("/"),
     siteName: site.name,
-    title: "Mojo — talk it out, find your mojo",
+    locale: "en_US",
+    title: defaultTitle,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mojo — talk it out, find your mojo",
+    title: defaultTitle,
     description: site.description,
+    ...(site.twitterHandle ? { site: site.twitterHandle, creator: site.twitterHandle } : {}),
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  verification: {
+    ...(site.googleVerification ? { google: site.googleVerification } : {}),
+    ...(site.bingVerification ? { other: { "msvalidate.01": site.bingVerification } } : {}),
+  },
+  formatDetection: { telephone: false },
+  // Static files under public/, referenced absolutely so they carry the base path.
+  icons: {
+    icon: [
+      { url: absoluteUrl("/favicon.ico"), sizes: "any" },
+      { url: absoluteUrl("/icon-192.png"), type: "image/png", sizes: "192x192" },
+      { url: absoluteUrl("/icon-512.png"), type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: absoluteUrl("/apple-touch-icon.png"), sizes: "180x180" }],
   },
 };
 
@@ -47,7 +72,17 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans">{children}</body>
+      <body className="min-h-full font-sans">
+        {children}
+        {site.gaId && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`} strategy="afterInteractive" />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.gaId}');`}
+            </Script>
+          </>
+        )}
+      </body>
     </html>
   );
 }

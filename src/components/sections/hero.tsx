@@ -1,6 +1,10 @@
 import { MicIcon, MoonIcon, RunIcon, SmileIcon } from "@/components/icons";
 import { VoiceCheckinScreen } from "@/components/mockups/screens";
 import StoreButtons from "@/components/store-buttons";
+import WaitlistForm from "@/components/waitlist-form";
+import { site } from "@/lib/site";
+
+const launched = Boolean(site.appStoreUrl || site.playStoreUrl);
 
 export default function Hero() {
   return (
@@ -8,7 +12,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="animate-rise text-center lg:text-left">
           <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-violet-deep">
-            <MicIcon size={14} /> Voice-first wellness journal
+            <MicIcon size={14} /> Voice journal & mood tracker
           </span>
 
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
@@ -23,6 +27,7 @@ export default function Hero() {
           </p>
 
           <div id="download" className="mt-8 flex flex-col items-center gap-4 lg:items-start">
+            {!launched && <WaitlistForm source="hero" />}
             <StoreButtons />
             <p className="text-sm text-ink-soft">Free to start. Takes about 30 seconds a day.</p>
           </div>

@@ -1,6 +1,6 @@
 import { PlusIcon } from "@/components/icons";
 
-const faqs = [
+export const faqs = [
   {
     q: "What is Mojo?",
     a: "Mojo is a wellness journal you can talk to. You say how your day went, and Mojo logs your mood, sleep and activity, then shows you the patterns behind your best days.",

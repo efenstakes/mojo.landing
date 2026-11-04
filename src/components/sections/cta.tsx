@@ -1,4 +1,8 @@
 import StoreButtons from "@/components/store-buttons";
+import WaitlistForm from "@/components/waitlist-form";
+import { site } from "@/lib/site";
+
+const launched = Boolean(site.appStoreUrl || site.playStoreUrl);
 
 export default function Cta() {
   return (
@@ -12,7 +16,12 @@ export default function Cta() {
         <p className="relative mx-auto mt-5 max-w-xl text-lg text-white/90">
           Start with today. Tell Mojo how it went, and let your patterns do the rest.
         </p>
-        <StoreButtons tone="light" className="relative mt-8 justify-center" />
+        {!launched && (
+          <div className="relative mt-8 flex justify-center">
+            <WaitlistForm source="cta" tone="light" />
+          </div>
+        )}
+        <StoreButtons tone="light" className="relative mt-6 justify-center" />
       </div>
     </section>
   );

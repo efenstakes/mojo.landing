@@ -110,6 +110,19 @@ export const HeartIcon = (p: IconProps) => (
     <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z" />
   </svg>
 );
+export const ArrowIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M5 12h14" />
+    <path d="m13 6 6 6-6 6" />
+  </svg>
+);
+
+export const CheckIcon = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
 export const MenuIcon = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="M4 7h16M4 12h16M4 17h16" />
