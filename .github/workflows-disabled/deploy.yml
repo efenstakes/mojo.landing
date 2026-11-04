@@ -1,4 +1,4 @@
-# Deploys the Mojo landing site as a static export to heylixir.com/mojo (Namecheap, via FTP),
+# Deploys the MOJO landing site as a static export to heylixir.com/mojo (Namecheap, via FTP),
 # the same host as the Heylixir site.
 #
 # DISABLED: GitHub only runs workflows in .github/workflows/. To enable, see README.md in this

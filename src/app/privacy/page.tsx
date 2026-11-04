@@ -62,7 +62,7 @@ export default function PrivacyPage() {
 
       <h2>Your choices and rights</h2>
       <ul>
-        <li>Access and export: request a copy of your data from the app or by emailing us.</li>
+        <li>Access and export: email us and we&apos;ll send you a copy of your data.</li>
         <li>Correct: edit your profile and entries at any time.</li>
         <li>
           Delete: delete your data or your whole account in the app&apos;s settings. See{" "}
