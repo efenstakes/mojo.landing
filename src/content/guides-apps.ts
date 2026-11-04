@@ -6,12 +6,12 @@ import type { AppPick, Guide } from "./types";
  * claims that go stale quickly.
  */
 
-const mojo = (bestFor: string, summary: string): AppPick => ({ name: "MOJO", bestFor, summary, isMojo: true });
+export const mojo = (bestFor: string, summary: string): AppPick => ({ name: "MOJO", bestFor, summary, isMojo: true });
 
-const DISCLOSURE =
+export const DISCLOSURE =
   "Disclosure: we make MOJO, so it's listed first. Every other app here is one we'd genuinely suggest for the use case, and we've kept descriptions to what each app is known for.";
 
-const SAFETY_SECTION = {
+export const SAFETY_SECTION = {
   heading: "Apps help, but they're not treatment",
   body: [
     "Wellness apps are good at building habits and helping you notice patterns. They don't diagnose or treat anything. If low mood, anxiety or exhaustion last for weeks or make it hard to function, talk to a doctor or mental health professional. If you're in crisis, contact your local emergency number or a crisis line such as 988 in the US or Samaritans on 116 123 in the UK.",
@@ -294,7 +294,7 @@ export const appGuides: Guide[] = [
         a: "Usually two to four weeks of consistent check-ins. MOJO starts showing an energy score after about a week.",
       },
     ],
-    related: ["how-to-track-your-mood", "how-sleep-affects-mood", "best-journaling-apps"],
+    related: ["daylio-alternatives", "how-to-track-your-mood", "best-journaling-apps"],
   },
   {
     slug: "best-journaling-apps",
@@ -375,7 +375,7 @@ export const appGuides: Guide[] = [
         a: "The benefits come from reflecting regularly, not the medium. Use whichever you'll stick with. Apps add search, reminders and mood trends.",
       },
     ],
-    related: ["voice-journaling-guide", "benefits-of-journaling-for-mental-health", "journal-prompts-for-work-stress"],
+    related: ["day-one-alternatives", "voice-journaling-guide", "benefits-of-journaling-for-mental-health"],
   },
   {
     slug: "best-apps-for-stress-and-anxiety",
@@ -476,6 +476,6 @@ export const appGuides: Guide[] = [
         a: "No. Apps can help you cope and notice patterns, but they don't diagnose or treat anxiety. If anxiety is affecting your daily life, talk to a doctor or mental health professional.",
       },
     ],
-    related: ["how-to-calm-anxiety", "how-to-reduce-stress", "best-mood-tracker-apps"],
+    related: ["headspace-alternatives", "calm-alternatives", "how-to-calm-anxiety"],
   },
 ];

@@ -1,4 +1,5 @@
 import { appGuides } from "./guides-apps";
+import { alternativeGuides } from "./guides-alternatives";
 import { burnoutGuides } from "./guides-burnout";
 import { mindGuides } from "./guides-mind";
 import { universityGuides } from "./guides-university";
@@ -8,7 +9,7 @@ import type { Guide, GuideCategory } from "./types";
 
 export type { Guide, GuideCategory } from "./types";
 
-export const guides: Guide[] = [...mindGuides, ...workGuides, ...burnoutGuides, ...universityGuides, ...appGuides, ...wellbeingGuides];
+export const guides: Guide[] = [...mindGuides, ...workGuides, ...burnoutGuides, ...universityGuides, ...appGuides, ...alternativeGuides, ...wellbeingGuides];
 
 export const categories: { name: GuideCategory; blurb: string }[] = [
   { name: "Stress & anxiety", blurb: "Calm anxious moments, ease stress and quiet an overthinking mind." },
@@ -17,6 +18,7 @@ export const categories: { name: GuideCategory; blurb: string }[] = [
   { name: "Burnout", blurb: "Spot it early, recover properly and keep it from coming back." },
   { name: "University", blurb: "Deadlines, exams, sleep and settling in." },
   { name: "App guides", blurb: "Honest round-ups of wellness apps worth trying." },
+  { name: "Alternatives", blurb: "Looking beyond a popular app? Fair comparisons and options to try." },
   { name: "Journaling & mood", blurb: "Start journaling, track your mood and actually learn from it." },
   { name: "Sleep & energy", blurb: "Sleep, movement and habits that lift your mood." },
 ];

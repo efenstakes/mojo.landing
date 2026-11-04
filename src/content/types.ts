@@ -6,7 +6,8 @@ export type GuideCategory =
   | "University"
   | "Journaling & mood"
   | "Sleep & energy"
-  | "App guides";
+  | "App guides"
+  | "Alternatives";
 
 export type GuideSection = {
   heading: string;
