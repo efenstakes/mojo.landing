@@ -10,7 +10,8 @@ const featuredGuides = [
   "managing-mental-health-working-9-to-5",
   "managing-mental-health-at-university",
   "best-mental-health-apps-for-students",
-  "best-mental-health-apps-for-9-to-5-workers",
+  "how-to-calm-anxiety",
+  "how-to-reduce-stress",
   "signs-of-burnout-at-work",
   "how-to-recover-from-burnout",
 ]

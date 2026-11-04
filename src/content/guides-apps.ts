@@ -377,4 +377,105 @@ export const appGuides: Guide[] = [
     ],
     related: ["voice-journaling-guide", "benefits-of-journaling-for-mental-health", "journal-prompts-for-work-stress"],
   },
+  {
+    slug: "best-apps-for-stress-and-anxiety",
+    category: "App guides",
+    title: "The best apps for stress and anxiety",
+    metaTitle: "Best Apps for Stress and Anxiety",
+    description:
+      "The best apps for stress and anxiety: calming tools for anxious moments, guided meditation, mood check-ins and apps that help you find your triggers.",
+    keywords: [
+      "best apps for anxiety",
+      "best apps for stress",
+      "anxiety apps",
+      "stress relief apps",
+      "apps for anxiety and stress",
+    ],
+    published: "2026-11-04",
+    updated: "2026-11-04",
+    intro:
+      "Apps for stress and anxiety fall into three groups: tools to calm down in the moment (guided breathing and meditation), tools to work through anxious thoughts, and trackers that show what triggers your stress. MOJO is best for finding your triggers through 30-second voice check-ins; Headspace and Calm are strong for guided calm; Insight Timer has a huge free library; How We Feel helps you name emotions; and MindShift CBT offers free tools based on cognitive behavioural therapy.",
+    sections: [
+      {
+        heading: "What to look for",
+        body: [
+          "Think about when you need help. If anxiety spikes suddenly, you want something you can open and use in under a minute. If stress builds over weeks, you want something that shows you the pattern. Many people use one of each.",
+        ],
+        bullets: [
+          "Fast to use when you're anxious.",
+          "Tools for the moment and insight over time.",
+          "Private by default.",
+          "Free to start, so you can try before committing.",
+        ],
+      },
+      {
+        heading: "Our picks",
+        body: [DISCLOSURE],
+      },
+      {
+        heading: "Combine calming and tracking",
+        body: [
+          "A calming app helps you get through a hard moment; a tracker helps you have fewer of them. Pairing a quick daily check-in with a breathing or meditation app covers both.",
+        ],
+      },
+      SAFETY_SECTION,
+    ],
+    apps: [
+      mojo(
+        "Finding what triggers your stress",
+        "Say how your day went in about 30 seconds and MOJO logs your mood, sleep and activity, keeps your words as a journal entry, and shows patterns like more anxious days after short sleep or calmer days after a walk. Launching on iOS and Android on 1 December 2026.",
+      ),
+      {
+        name: "Headspace",
+        bestFor: "Guided meditation for stress",
+        summary:
+          "One of the best-known meditation apps, with guided sessions for stress, anxiety, focus and sleep, including short ones for tough moments.",
+      },
+      {
+        name: "Calm",
+        bestFor: "Relaxation and sleep",
+        summary:
+          "Known for Sleep Stories, calming music and guided meditations. Good if stress and anxiety affect your sleep.",
+      },
+      {
+        name: "Insight Timer",
+        bestFor: "A big free library",
+        summary:
+          "A very large collection of guided meditations and talks from many teachers, with lots available for free.",
+      },
+      {
+        name: "How We Feel",
+        bestFor: "Naming your emotions",
+        summary:
+          "A free app from a nonprofit that helps you identify exactly what you're feeling and suggests short strategies to help.",
+      },
+      {
+        name: "MindShift CBT",
+        bestFor: "Working through anxious thoughts",
+        summary:
+          "A free app from Anxiety Canada with tools based on cognitive behavioural therapy, such as thought journals and coping cards.",
+      },
+    ],
+    takeaways: [
+      "Use a calming app for anxious moments and a tracker to find your triggers.",
+      "Pick something you can open and use in under a minute.",
+      "Several good options are free to start.",
+      "Apps support wellbeing; see a professional if anxiety persists.",
+    ],
+    faqs: [
+      {
+        q: "What is the best app for anxiety?",
+        a: "It depends on what you need. For calming down, a meditation app like Headspace, Calm or Insight Timer. For working through anxious thoughts, MindShift CBT. For understanding your triggers, a check-in app like MOJO.",
+      },
+      {
+        q: "Are there free apps for stress and anxiety?",
+        a: "Yes. Insight Timer, How We Feel and MindShift CBT are known for free tools, and MOJO is free to start.",
+      },
+      {
+        q: "Can an app treat anxiety?",
+        a: "No. Apps can help you cope and notice patterns, but they don't diagnose or treat anxiety. If anxiety is affecting your daily life, talk to a doctor or mental health professional.",
+      },
+    ],
+    related: ["how-to-calm-anxiety", "how-to-reduce-stress", "best-mood-tracker-apps"],
+  },
 ];

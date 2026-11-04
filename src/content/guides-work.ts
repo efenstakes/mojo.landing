@@ -370,7 +370,7 @@ export const workGuides: Guide[] = [
         a: "Yes. Voice journaling works the same way and is often easier on busy or tiring days. Apps like MOJO transcribe what you say into a journal entry.",
       },
     ],
-    related: ["voice-journaling-guide", "benefits-of-journaling-for-mental-health", "how-to-decompress-after-work"],
+    related: ["journal-prompts-for-anxiety", "how-to-reduce-stress", "how-to-decompress-after-work"],
   },
   {
     slug: "remote-work-mental-health",

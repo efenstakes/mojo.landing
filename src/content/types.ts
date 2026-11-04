@@ -1,4 +1,12 @@
-export type GuideCategory = "Work" | "Burnout" | "University" | "Journaling" | "Sleep & energy" | "App guides";
+export type GuideCategory =
+  | "Stress & anxiety"
+  | "Mental health"
+  | "Work"
+  | "Burnout"
+  | "University"
+  | "Journaling & mood"
+  | "Sleep & energy"
+  | "App guides";
 
 export type GuideSection = {
   heading: string;

@@ -3,7 +3,7 @@ import type { Guide } from "./types";
 export const wellbeingGuides: Guide[] = [
   {
     slug: "voice-journaling-guide",
-    category: "Journaling",
+    category: "Journaling & mood",
     title: "Voice journaling: what it is and how to start",
     metaTitle: "Voice Journaling: What It Is and How to Start",
     description:
@@ -84,7 +84,7 @@ export const wellbeingGuides: Guide[] = [
   },
   {
     slug: "benefits-of-journaling-for-mental-health",
-    category: "Journaling",
+    category: "Journaling & mood",
     title: "The benefits of journaling for mental health (and how to start)",
     metaTitle: "Benefits of Journaling for Mental Health",
     description:
@@ -159,11 +159,11 @@ export const wellbeingGuides: Guide[] = [
         a: "Daily works well if it's short. Even a few times a week helps. Consistency matters more than length.",
       },
     ],
-    related: ["voice-journaling-guide", "how-to-track-your-mood", "best-journaling-apps"],
+    related: ["how-to-start-journaling", "voice-journaling-guide", "gratitude-journal"],
   },
   {
     slug: "how-to-track-your-mood",
-    category: "Journaling",
+    category: "Journaling & mood",
     title: "How to track your mood (and actually learn something from it)",
     metaTitle: "How to Track Your Mood and Spot Patterns",
     description:
@@ -230,7 +230,7 @@ export const wellbeingGuides: Guide[] = [
         a: "Often two to four weeks of daily entries. MOJO starts showing patterns after about ten days of check-ins.",
       },
     ],
-    related: ["best-mood-tracker-apps", "how-sleep-affects-mood", "benefits-of-journaling-for-mental-health"],
+    related: ["mood-journal", "best-mood-tracker-apps", "mental-health-check-in"],
   },
   {
     slug: "how-sleep-affects-mood",

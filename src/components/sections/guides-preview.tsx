@@ -4,9 +4,9 @@ import { ArrowIcon } from "@/components/icons";
 import { getGuide } from "@/content/guides";
 
 const picks = [
+  "how-to-calm-anxiety",
+  "how-to-reduce-stress",
   "managing-mental-health-working-9-to-5",
-  "managing-mental-health-at-university",
-  "best-mental-health-apps-for-students",
   "how-to-recover-from-burnout",
   "voice-journaling-guide",
   "how-sleep-affects-mood",
