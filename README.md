@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mojo landing page
 
-## Getting Started
-
-First, run the development server:
+Marketing site for **Mojo**, the voice-first wellness journal (mood, sleep,
+activities and Halo AI insights). Built with Next.js 16 (App Router, Cache
+Components) and Tailwind CSS 4. Fully static.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path | What |
+|---|---|
+| `src/lib/site.ts` | All links and contact details: store URLs, privacy/terms, support email |
+| `src/app/globals.css` | Brand tokens (colours, font, radii, animations) and the `glass`, `text-gradient`, `bg-gradient-brand` utilities |
+| `src/app/page.tsx` | The page, assembled from sections |
+| `src/components/sections/` | Hero, how it works, feature sections, community & privacy, FAQ, call to action |
+| `src/components/mockups/` | The phone frame and app-screen mockups (voice check-in, journal, mood & sleep, activities, energy score) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Before launch
 
-## Learn More
+- Set `appStoreUrl` / `playStoreUrl` in `src/lib/site.ts`. Until then the store
+  buttons say "Coming soon" and don't link anywhere.
+- Set `termsUrl` (the Terms link is hidden while it's empty) and confirm
+  `privacyUrl` points at Mojo's privacy policy.
+- Mockup numbers are illustrative example data, not real users.
 
-To learn more about Next.js, take a look at the following resources:
+## Design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Same family as the Heylixir site (frosted cards over a soft animated
+background, big gradient headlines, alternating feature sections with icon
+chips) but its own look: Mojo's violet → teal gradient instead of purple →
+orange, Plus Jakarta Sans instead of Lato, and app-screen mockups instead of
+photos.
