@@ -8,7 +8,7 @@ export default function NotFound() {
       <Background />
       <div className="glass max-w-md rounded-blob p-10 text-center">
         <div className="flex justify-center">
-          <Logo />
+          <Logo className="text-[30px]" />
         </div>
         <h1 className="mt-6 text-3xl font-extrabold">Lost your MOJO?</h1>
         <p className="mt-3 text-ink-soft">This page doesn&apos;t exist. Let&apos;s get you back on track.</p>

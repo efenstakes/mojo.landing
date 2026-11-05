@@ -1,65 +1,56 @@
-"""Generates the website's favicon and icons from the MOJO mark (same design as the app icon).
+"""Generates the website's favicon and icons from the MOJO brand SVGs in public/brand/.
 
-    python3 scripts/generate_icons.py        (needs Pillow and numpy)
+    pip install playwright pillow
+    CHROME_PATH=/path/to/chrome python3 scripts/generate_icons.py   (CHROME_PATH optional)
+
+Source artwork (edit these, then re-run):
+  public/brand/o-talker.svg   the talker O (used alone for the browser tab icon)
+  public/brand/mojo-icon.svg  the app icon: talker on a soft lavender-to-mint background
 
 Writes to public/:
-  favicon.ico           16, 32 and 48 px, each drawn separately with a bolder spark so it reads in a tab
-  icon.svg              sharp at any size (modern browsers prefer it)
-  icon-192.png, icon-512.png    rounded, for the web app manifest ("any")
-  icon-maskable-512.png full bleed, spark inside the safe zone, for Android ("maskable")
-  apple-touch-icon.png  180 px, full bleed and opaque (iOS rounds it)
+  icon.svg                    the talker O (browser tabs, sharp at any size)
+  favicon.ico                 16 px (o-talker-small.svg), 32 and 48 px of the talker O
+  icon-192.png, icon-512.png  app icon with rounded corners (web app manifest, "any")
+  icon-maskable-512.png       full bleed, character inside the safe zone ("maskable")
+  apple-touch-icon.png        180 px, full bleed and opaque (iOS rounds it)
 """
-import math
+import io
+import os
 import pathlib
+import shutil
 
-import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image
+from playwright.sync_api import sync_playwright
 
 PUBLIC = pathlib.Path(__file__).resolve().parent.parent / "public"
-SS = 4
-VIOLET = (0x7A, 0x63, 0xD6)
-TEAL = (0x4A, 0xAF, 0x94)
-SPARK = [(12, 2.5), (14.2, 8.8), (20.5, 11), (14.2, 13.2), (12, 19.5), (9.8, 13.2), (3.5, 11), (9.8, 8.8)]
+TALKER = (PUBLIC / "brand" / "o-talker.svg").read_text()
+TALKER_SMALL = (PUBLIC / "brand" / "o-talker-small.svg").read_text()  # simplified for 16 px
+ICON = (PUBLIC / "brand" / "mojo-icon.svg").read_text()
 
 
-def gradient(s):
-    a = math.radians(135)
-    dx, dy = math.sin(a), -math.cos(a)
-    ys, xs = np.mgrid[0:s, 0:s].astype(np.float32)
-    c = (s - 1) / 2
-    half = (abs(dx) + abs(dy)) * s / 2
-    t = (((xs - c) * dx + (ys - c) * dy) / (2 * half) + .5).clip(0, 1)[..., None]
-    rgb = np.array(VIOLET) * (1 - t) + np.array(TEAL) * t
-    return Image.fromarray(rgb.round().astype(np.uint8), "RGB").convert("RGBA")
+def render(page, svg, size, *, radius=0.0, inset=0.0, background=None):
+    """Renders an SVG at size x size. inset shrinks the art (for maskable safe zones)."""
+    pad = size * inset
+    html = f"""<html><body style="margin:0;background:transparent">
+<div style="width:{size}px;height:{size}px;border-radius:{size * radius}px;overflow:hidden;background:{background or 'transparent'};display:flex;align-items:center;justify-content:center">
+<div style="width:{size - 2 * pad}px;height:{size - 2 * pad}px">{svg.replace('<svg ', '<svg width="100%" height="100%" ', 1)}</div></div></body></html>"""
+    page.set_viewport_size({"width": size, "height": size})
+    page.set_content(html)
+    return Image.open(io.BytesIO(page.screenshot(omit_background=True))).convert("RGBA")
 
-
-def icon(size, spark=.27, corner=None, opaque=False):
-    s = size * SS
-    img = gradient(s)
-    k = spark * s / 8.5
-    ImageDraw.Draw(img).polygon([((x - 12) * k + s / 2, (y - 11) * k + s / 2) for x, y in SPARK], fill=(255, 255, 255, 255))
-    if corner is not None:
-        m = Image.new("L", (s, s), 0)
-        ImageDraw.Draw(m).rounded_rectangle((0, 0, s - 1, s - 1), radius=int(s * corner), fill=255)
-        img.putalpha(m)
-    img = img.resize((size, size), Image.LANCZOS)
-    return img.convert("RGB") if opaque else img
-
-
-SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A63D6"/><stop offset="1" stop-color="#4AAF94"/></linearGradient></defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <path fill="#fff" transform="translate(32 32) scale({k}) translate(-12 -11)" d="M12 2.5l2.2 6.3 6.3 2.2-6.3 2.2L12 19.5l-2.2-6.3L3.5 11l6.3-2.2z"/>
-</svg>
-"""
 
 if __name__ == "__main__":
-    # tab icons: bigger spark, small corner radius, each size drawn on its own
-    tab = [icon(n, spark=.36, corner=.2) for n in (16, 32, 48)]
-    tab[2].save(PUBLIC / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)], append_images=tab[:2])
-    (PUBLIC / "icon.svg").write_text(SVG.replace("{k}", f"{.32 * 64 / 8.5:.3f}"))
-    icon(192, corner=.225).save(PUBLIC / "icon-192.png", optimize=True)
-    icon(512, corner=.225).save(PUBLIC / "icon-512.png", optimize=True)
-    icon(512, spark=.2, opaque=True).save(PUBLIC / "icon-maskable-512.png", optimize=True)
-    icon(180, opaque=True).save(PUBLIC / "apple-touch-icon.png", optimize=True)
+    shutil.copyfile(PUBLIC / "brand" / "o-talker.svg", PUBLIC / "icon.svg")
+    with sync_playwright() as p:
+        browser = p.chromium.launch(executable_path=os.environ.get("CHROME_PATH") or None)
+        page = browser.new_page(device_scale_factor=1)
+        tab = [render(page, TALKER_SMALL, 16), render(page, TALKER, 32), render(page, TALKER, 48)]
+        tab[2].save(PUBLIC / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)], append_images=tab[:2])
+        render(page, ICON, 192, radius=.225).save(PUBLIC / "icon-192.png", optimize=True)
+        render(page, ICON, 512, radius=.225).save(PUBLIC / "icon-512.png", optimize=True)
+        # maskable: background fills the square, character shrunk into the central safe zone
+        bg = "linear-gradient(135deg,#EFEAFF,#DDF3EA)"
+        render(page, TALKER, 512, inset=.22, background=bg).convert("RGB").save(PUBLIC / "icon-maskable-512.png", optimize=True)
+        render(page, ICON, 180).convert("RGB").save(PUBLIC / "apple-touch-icon.png", optimize=True)
+        browser.close()
     print("Website icons generated in public/")

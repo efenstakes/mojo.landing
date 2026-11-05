@@ -1,13 +1,17 @@
-/** MOJO wordmark: a soft spark mark + name. */
-export default function Logo({ light = false }: { light?: boolean }) {
+import { ChillO, TalkerO } from "@/components/brand/characters";
+
+/** MOJO wordmark: M, the talker O, J, the chill O. `light` = for dark backgrounds. */
+export default function Logo({ light = false, className = "text-2xl" }: { light?: boolean; className?: string }) {
   return (
-    <span className="flex items-center gap-2">
-      <span className="relative flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-brand shadow-[0_8px_20px_-8px_rgb(91_69_184/0.8)]">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden>
-          <path d="M12 2.5l2.2 6.3 6.3 2.2-6.3 2.2L12 19.5l-2.2-6.3L3.5 11l6.3-2.2z" />
-        </svg>
-      </span>
-      <span className={`text-xl font-extrabold tracking-wide ${light ? "text-white" : "text-ink"}`}>MOJO</span>
+    <span
+      role="img"
+      aria-label="MOJO"
+      className={`inline-flex items-center font-extrabold leading-none tracking-tight ${light ? "text-white" : "text-ink"} ${className}`}
+    >
+      <span aria-hidden="true">M</span>
+      <TalkerO size="0.86em" dark={light} style={{ margin: "0 0.03em" }} />
+      <span aria-hidden="true">J</span>
+      <ChillO size="0.86em" dark={light} style={{ marginLeft: "0.03em" }} />
     </span>
   );
 }

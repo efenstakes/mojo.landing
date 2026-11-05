@@ -16,6 +16,8 @@ const nextConfig = {
     output: 'standalone',
     // cleans build for "output: 'standalone'" to avoid mangling the build folders
     outputFileTracingRoot: path.join(__dirname),
+    // the social card fonts are read from disk, so ship them with the standalone server
+    outputFileTracingIncludes: { '/**': ['./assets/fonts/**'] },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },

@@ -29,7 +29,7 @@ export default function Navbar() {
         aria-label="Main"
       >
         <Link href="/" className="flex items-center gap-2" aria-label="MOJO home">
-          <Logo />
+          <Logo className="text-[34px]" />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

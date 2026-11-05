@@ -38,7 +38,7 @@ export default function Footer() {
     <footer className="px-4 pb-10 pt-6">
       <div className="glass mx-auto grid max-w-6xl gap-10 rounded-blob px-8 py-10 md:grid-cols-[1fr_2.4fr]">
         <div className="max-w-xs">
-          <Logo />
+          <Logo className="text-[30px]" />
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">{site.tagline}</p>
           <p className="mt-4 text-sm text-ink-soft">
             <a href={`mailto:${site.supportEmail}`} className="hover:text-ink">
