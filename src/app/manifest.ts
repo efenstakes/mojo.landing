@@ -19,6 +19,8 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       { src: absoluteUrl("/icon-192.png"), sizes: "192x192", type: "image/png" },
       { src: absoluteUrl("/icon-512.png"), sizes: "512x512", type: "image/png" },
+      // full bleed, spark inside the safe zone: Android crops this to its own icon shape
+      { src: absoluteUrl("/icon-maskable-512.png"), sizes: "512x512", type: "image/png", purpose: "maskable" },
     ],
   };
 }

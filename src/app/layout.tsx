@@ -58,6 +58,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: absoluteUrl("/favicon.ico"), sizes: "any" },
+      // sharp at any size; modern browsers prefer it over the .ico
+      { url: absoluteUrl("/icon.svg"), type: "image/svg+xml" },
       { url: absoluteUrl("/icon-192.png"), type: "image/png", sizes: "192x192" },
       { url: absoluteUrl("/icon-512.png"), type: "image/png", sizes: "512x512" },
     ],
