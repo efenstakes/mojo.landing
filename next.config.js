@@ -2,9 +2,10 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports -- CommonJS config
 const path = require('path')
 
-// The site's public URL. Its path becomes basePath, so https://heylixir.com/mojo serves the
-// site under /mojo (set NEXT_PUBLIC_SITE_URL in .env.production).
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://heylixir.com/mojo'
+// The site's public URL (set NEXT_PUBLIC_SITE_URL in .env.production). It is served at the root of
+// mojo.heylixir.com, so basePath is empty; a URL with a path (e.g. https://example.com/mojo) would
+// serve the site under that path instead.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mojo.heylixir.com'
 const basePath = new URL(siteUrl).pathname.replace(/\/+$/, '')
 
 const nextConfig = {
@@ -38,6 +39,13 @@ const nextConfig = {
     cacheComponents: true,
     reactCompiler: true,
     poweredByHeader: false,
+    // the site used to live under /mojo; send old links to the same page at the root
+    async redirects() {
+        return basePath ? [] : [
+            { source: '/mojo', destination: '/', permanent: true },
+            { source: '/mojo/:path*', destination: '/:path*', permanent: true },
+        ]
+    },
 }
 
 module.exports = nextConfig

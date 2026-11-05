@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <!-- the talker O simplified for 16 px: bigger eyes and mouth, no small details -->
-  <circle cx="50" cy="50" r="40" fill="#fff" stroke="#7A63D6" stroke-width="18"/>
+  <circle cx="50" cy="50" r="43" fill="#fff" stroke="#7A63D6" stroke-width="12"/>
   <circle cx="37" cy="43" r="8.5" fill="#1D1838"/><circle cx="63" cy="43" r="8.5" fill="#1D1838"/>
   <path d="M35 56H65A15 15 0 0 1 35 56Z" fill="#1D1838"/>
 </svg>

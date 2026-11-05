@@ -6,10 +6,7 @@ export function generateStaticParams() {
   return [{}];
 }
 
-/**
- * When this app is served under a path (heylixir.com/mojo), crawlers read robots.txt from the
- * domain root, which the parent site owns. Add `Sitemap: <this sitemap URL>` there too.
- */
+/** robots.txt for mojo.heylixir.com (the site is served at the subdomain root, so crawlers read this one). */
 export default function robots(): MetadataRoute.Robots {
   return {
     // The unsubscribe page is kept out of search with a noindex tag, which crawlers must be

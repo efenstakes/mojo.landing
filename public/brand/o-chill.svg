@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <!-- MOJO's second O: the chill one (how you feel after) -->
-  <circle cx="50" cy="50" r="38" fill="#fff" stroke="#3FA688" stroke-width="15"/>
+  <circle cx="50" cy="50" r="41" fill="#fff" stroke="#3FA688" stroke-width="9"/>
   <path d="M33.5 47q6.5-7.5 13 0M53.5 47q6.5-7.5 13 0M39.5 56.5q10.5 9.5 21 0" fill="none" stroke="#1D1838" stroke-width="4.2" stroke-linecap="round"/>
   <circle cx="32" cy="57.5" r="3.6" fill="#FF8FB1" opacity=".6"/><circle cx="68" cy="57.5" r="3.6" fill="#FF8FB1" opacity=".6"/>
 </svg>

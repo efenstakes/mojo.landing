@@ -10,7 +10,7 @@ const INK = "#1D1838";
 export function TalkerO({ size = "1em", dark = false, style, className }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 100 100" style={style} className={className} aria-hidden="true">
-      <circle cx="50" cy="50" r="38" fill="#fff" stroke={dark ? "#A996FF" : "#7A63D6"} strokeWidth="15" />
+      <circle cx="50" cy="50" r="41" fill="#fff" stroke={dark ? "#A996FF" : "#7A63D6"} strokeWidth="9" />
       <circle cx="40" cy="44" r="5" fill={INK} />
       <circle cx="60" cy="44" r="5" fill={INK} />
       <circle cx="41.7" cy="42.3" r="1.6" fill="#fff" />
@@ -25,7 +25,7 @@ export function TalkerO({ size = "1em", dark = false, style, className }: Props)
 export function ChillO({ size = "1em", dark = false, style, className }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 100 100" style={style} className={className} aria-hidden="true">
-      <circle cx="50" cy="50" r="38" fill="#fff" stroke={dark ? "#6FD3B4" : "#3FA688"} strokeWidth="15" />
+      <circle cx="50" cy="50" r="41" fill="#fff" stroke={dark ? "#6FD3B4" : "#3FA688"} strokeWidth="9" />
       <path
         d="M33.5 47q6.5-7.5 13 0M53.5 47q6.5-7.5 13 0M39.5 56.5q10.5 9.5 21 0"
         fill="none"

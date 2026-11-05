@@ -44,14 +44,14 @@ photos.
   entry, Article/Breadcrumb/FAQ JSON-LD and related-guide links. Keep `metaTitle` under ~60
   characters and `description` at 140-160. Bump `updated` when you edit a guide.
 - `sitemap.xml`, `robots.txt`, `manifest.webmanifest` and `llms.txt` are generated from the same data.
-- Canonical URLs come from `NEXT_PUBLIC_SITE_URL` (default `https://heylixir.com/mojo`), whose path
-  is also the `basePath`. URLs have no trailing slash.
+- Canonical URLs come from `NEXT_PUBLIC_SITE_URL` (default `https://mojo.heylixir.com`), served at the
+  domain root (no `basePath`). URLs have no trailing slash.
 
 ## Environment variables
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Public URL, e.g. `https://heylixir.com/mojo` (sets basePath and canonicals) |
+| `NEXT_PUBLIC_SITE_URL` | Public URL, e.g. `https://mojo.heylixir.com` (canonicals; a path in it would become the basePath) |
 | `NEXT_PUBLIC_MOJO_API_URL` | MOJO API origin for the launch waitlist (`POST /v1/launch-notifications`). Without it the form falls back to email. |
 | `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL` | Store links. While both are unset the site shows the waitlist form. |
 | `NEXT_PUBLIC_LAUNCH_DATE` | Launch moment for the countdown, ISO 8601 (default `2026-12-01T00:00:00Z`) |
@@ -74,7 +74,7 @@ project sits inside another folder that has its own lockfile.
 Deploy `deploy.zip` on Namecheap as a Node.js app (cPanel → Setup Node.js App):
 
 1. Create the app: Node.js 20+, mode Production, application root e.g. `mojo-website`,
-   application URL `heylixir.com/mojo`, startup file `server.js`.
+   application URL `mojo.heylixir.com` (add the subdomain in cPanel → Domains first), startup file `server.js`.
 2. File Manager → application root → upload `deploy.zip` → Extract (overwrite).
 3. Restart the app in Setup Node.js App. No "Run NPM Install" needed: the zip includes the
    `node_modules` the server uses.

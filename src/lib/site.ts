@@ -1,22 +1,22 @@
 /**
  * Every external link, URL and contact detail on the site, in one place.
  *
- * NEXT_PUBLIC_SITE_URL is the public address of this site, including any
- * sub-path. It defaults to https://heylixir.com/mojo -- the address the MOJO
- * API already uses in its emails (privacy, unsubscribe). next.config.ts
+ * NEXT_PUBLIC_SITE_URL is the public address of this site, served at the
+ * root of https://mojo.heylixir.com (the default, and the address the MOJO
+ * API uses in its emails: privacy, unsubscribe). next.config.js
  * derives `basePath` from the same value, so canonical URLs, the sitemap and
  * routing always agree.
  */
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://heylixir.com/mojo";
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mojo.heylixir.com";
 
-/** Absolute site URL without a trailing slash, e.g. https://heylixir.com/mojo */
+/** Absolute site URL without a trailing slash, e.g. https://mojo.heylixir.com */
 export const siteUrl = rawSiteUrl.replace(/\/+$/, "");
 
 /**
  * Absolute URL for a path on this site, without a trailing slash (matching
  * `trailingSlash: false` in next.config.js), so canonicals, the sitemap and the served URL agree.
- *   absoluteUrl("/guides")      -> https://heylixir.com/mojo/guides
- *   absoluteUrl("/sitemap.xml") -> https://heylixir.com/mojo/sitemap.xml
+ *   absoluteUrl("/guides")      -> https://mojo.heylixir.com/guides
+ *   absoluteUrl("/sitemap.xml") -> https://mojo.heylixir.com/sitemap.xml
  */
 export function absoluteUrl(path = "/"): string {
   const p = (path.startsWith("/") ? path : `/${path}`).replace(/\/+$/, "");

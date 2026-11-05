@@ -13,8 +13,7 @@ const jakarta = Plus_Jakarta_Sans({
 const defaultTitle = "MOJO: Voice Journal & Mood Tracker for Sleep and Energy";
 
 export const metadata: Metadata = {
-  // Includes the base path (e.g. /mojo): Next joins relative metadata URLs, including generated
-  // OG images, onto this pathname. Canonical and OG page URLs are absolute via absoluteUrl().
+  // Next joins relative metadata URLs, including generated OG images, onto this URL. Canonical and OG page URLs are absolute via absoluteUrl().
   metadataBase: new URL(site.url),
   title: { default: defaultTitle, template: "%s · MOJO" },
   description: site.description,
