@@ -16,6 +16,8 @@
 # next.js
 /.next/
 /out/
+# Namecheap upload zips (npm run package:namecheap)
+/dist/
 
 # production
 /build

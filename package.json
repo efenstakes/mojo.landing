@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:static": "NEXT_OUTPUT=export next build"
+    "build:static": "NEXT_OUTPUT=export next build",
+    "package:namecheap": "node scripts/package-namecheap.mjs",
+    "package:namecheap:node": "node scripts/package-namecheap.mjs --node"
   },
   "dependencies": {
     "next": "16.4.5",

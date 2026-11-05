@@ -1,5 +1,5 @@
 # MOJO landing: static export served from __BASE_PATH__/ on an Apache host (heylixir.com/mojo).
-# The deploy workflow copies this to out/.htaccess, replacing __BASE_PATH__.
+# scripts/package-namecheap.mjs copies this to out/.htaccess, replacing __BASE_PATH__.
 #
 # This file's RewriteEngine replaces the parent site's rules for this directory, so the parent's
 # "rewrite every unknown URL to index.html" fallback does NOT apply here: unknown URLs get a real

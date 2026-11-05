@@ -61,8 +61,19 @@ photos.
 
 ## Builds and deploy
 
-- `npm run build && npm start` runs it as a Node server (Cache Components, Proxy returns real 404s).
-- `npm run build:static` writes a static export to `out/` for static hosting. `deploy/apache.htaccess`
-  is the Apache config for it.
-- The deploy pipeline (static export → FTP to `heylixir.com/mojo`) is in
-  `.github/workflows-disabled/deploy.yml` and is **disabled**; see the README next to it to enable it.
+Two ways to host on Namecheap, each packaged by one command into `dist/` (git-ignored):
+
+| | Static site (recommended) | Node.js app |
+| --- | --- | --- |
+| Command | `npm run package:namecheap` | `npm run package:namecheap:node` |
+| Zip | `dist/mojo-website-YYYY-MM-DD.zip` (~4 MB) | `dist/mojo-website-node-YYYY-MM-DD.zip` (~21 MB) |
+| Upload to | cPanel File Manager → `public_html/mojo/` → Extract | cPanel → Setup Node.js App (startup file `server.js`), then extract into the app root |
+| Notes | Plain files; `.htaccess` included (real 404s, HTTPS, caching) | Full Next.js server: real 404s, on-demand rendering; restart the app after uploading |
+
+Both do a clean build with the URL from `.env.production` (`NEXT_PUBLIC_SITE_URL`, which also sets the
+`/mojo` base path), check the output, and print step-by-step upload instructions. They run on macOS,
+Linux and Windows with no extra packages.
+
+- `npm run build && npm start` runs the site locally as a Node server.
+- The disabled GitHub workflow (`.github/workflows-disabled/deploy.yml`) uses the same static
+  packaging (`--no-zip`) and uploads over FTP; see the README next to it to enable it.

@@ -10,6 +10,9 @@ const basePath = new URL(siteUrl).pathname.replace(/\/+$/, "");
 // served from Namecheap). Static export can't use Partial Prerendering, so Cache Components is
 // switched off for that build; every page here is static content either way.
 const staticExport = process.env.NEXT_OUTPUT === "export";
+// NEXT_OUTPUT=standalone builds a self-contained Node server (.next/standalone/server.js) for
+// Node hosting, e.g. Namecheap's "Setup Node.js App". See scripts/package-namecheap.mjs --node.
+const standalone = process.env.NEXT_OUTPUT === "standalone";
 
 const nextConfig: NextConfig = {
   basePath,
@@ -17,7 +20,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   ...(staticExport
     ? { output: "export" as const, images: { unoptimized: true } }
-    : { cacheComponents: true, partialPrefetching: true }),
+    : { cacheComponents: true, partialPrefetching: true, ...(standalone ? { output: "standalone" as const } : {}) }),
   reactCompiler: true,
   poweredByHeader: false,
   turbopack: {
