@@ -45,7 +45,7 @@ photos.
   characters and `description` at 140-160. Bump `updated` when you edit a guide.
 - `sitemap.xml`, `robots.txt`, `manifest.webmanifest` and `llms.txt` are generated from the same data.
 - Canonical URLs come from `NEXT_PUBLIC_SITE_URL` (default `https://heylixir.com/mojo`), whose path
-  is also the `basePath`. URLs use trailing slashes.
+  is also the `basePath`. URLs have no trailing slash.
 
 ## Environment variables
 
@@ -61,19 +61,27 @@ photos.
 
 ## Builds and deploy
 
-Two ways to host on Namecheap, each packaged by one command into `dist/` (git-ignored):
+```bash
+npm run build
+```
 
-| | Static site (recommended) | Node.js app |
-| --- | --- | --- |
-| Command | `npm run package:namecheap` | `npm run package:namecheap:node` |
-| Zip | `dist/mojo-website-YYYY-MM-DD.zip` (~4 MB) | `dist/mojo-website-node-YYYY-MM-DD.zip` (~21 MB) |
-| Upload to | cPanel File Manager → `public_html/mojo/` → Extract | cPanel → Setup Node.js App (startup file `server.js`), then extract into the app root |
-| Notes | Plain files; `.htaccess` included (real 404s, HTTPS, caching) | Full Next.js server: real 404s, on-demand rendering; restart the app after uploading |
+`build` deletes `.next` and runs `next build --webpack` with `output: 'standalone'` (see
+`next.config.js`). `postbuild` then copies `.next/static` and `public` into `.next/standalone` and
+zips it as **`deploy.zip`** in the project root, so no files need moving by hand.
+`outputFileTracingRoot` keeps the standalone folder flat (`server.js` at the top), even when the
+project sits inside another folder that has its own lockfile.
 
-Both do a clean build with the URL from `.env.production` (`NEXT_PUBLIC_SITE_URL`, which also sets the
-`/mojo` base path), check the output, and print step-by-step upload instructions. They run on macOS,
-Linux and Windows with no extra packages.
+Deploy `deploy.zip` on Namecheap as a Node.js app (cPanel → Setup Node.js App):
 
-- `npm run build && npm start` runs the site locally as a Node server.
-- The disabled GitHub workflow (`.github/workflows-disabled/deploy.yml`) uses the same static
-  packaging (`--no-zip`) and uploads over FTP; see the README next to it to enable it.
+1. Create the app: Node.js 20+, mode Production, application root e.g. `mojo-website`,
+   application URL `heylixir.com/mojo`, startup file `server.js`.
+2. File Manager → application root → upload `deploy.zip` → Extract (overwrite).
+3. Restart the app in Setup Node.js App. No "Run NPM Install" needed: the zip includes the
+   `node_modules` the server uses.
+
+`npm run dev` runs locally (with a 2 GB memory cap, as on the server). Tailwind runs through PostCSS
+(`postcss.config.mjs`), so it works with both webpack and Turbopack. The build scripts use `rm`,
+`cp` and `zip`, so run them on macOS, Linux or WSL.
+
+The disabled GitHub workflow (`.github/workflows-disabled/deploy.yml`) runs the same `npm run build`
+and keeps `deploy.zip` as a download; see the README next to it.

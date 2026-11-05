@@ -60,7 +60,7 @@ export default function PrivacyPage() {
         app with MOJO Pass.
       </p>
 
-      <h2>Your choices and rights</h2>
+      <h2 id="your-choices">Your choices and rights</h2>
       <ul>
         <li>Access and export: email us and we&apos;ll send you a copy of your data.</li>
         <li>Correct: edit your profile and entries at any time.</li>

@@ -1,19 +1,14 @@
-# Deploys the MOJO landing site as a static export to heylixir.com/mojo (Namecheap, via FTP),
-# the same host as the Heylixir site.
+# Builds the MOJO website as a Node.js app and keeps deploy.zip as a download.
 #
 # DISABLED: GitHub only runs workflows in .github/workflows/. To enable, see README.md in this
 # folder, then `git mv .github/workflows-disabled/deploy.yml .github/workflows/deploy.yml`.
 
-name: Deploy landing
+name: Build website
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
-concurrency:
-  group: deploy-landing
-  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -21,9 +16,9 @@ permissions:
 env:
   NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://heylixir.com/mojo' }}
   NEXT_PUBLIC_MOJO_API_URL: ${{ vars.NEXT_PUBLIC_MOJO_API_URL }}
+  NEXT_PUBLIC_LAUNCH_DATE: ${{ vars.NEXT_PUBLIC_LAUNCH_DATE || '2026-12-01T00:00:00Z' }}
   NEXT_PUBLIC_APP_STORE_URL: ${{ vars.NEXT_PUBLIC_APP_STORE_URL }}
   NEXT_PUBLIC_PLAY_STORE_URL: ${{ vars.NEXT_PUBLIC_PLAY_STORE_URL }}
-  NEXT_PUBLIC_LAUNCH_DATE: ${{ vars.NEXT_PUBLIC_LAUNCH_DATE || '2026-12-01T00:00:00Z' }}
   NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
   NEXT_PUBLIC_TWITTER_HANDLE: ${{ vars.NEXT_PUBLIC_TWITTER_HANDLE }}
   NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
@@ -32,51 +27,19 @@ env:
 
 jobs:
   build:
-    name: Lint, build and export
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
       - run: npm ci
-
       - run: npm run lint
-
-      - name: Static export, Apache config and checks
-        # same script as `npm run package:namecheap`, without the zip
-        run: node scripts/package-namecheap.mjs --no-zip
-
+      # build + postbuild: standalone server zipped as deploy.zip
+      - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
-          name: site
-          path: out/
-          include-hidden-files: true
-          retention-days: 7
-
-  deploy:
-    name: Upload to heylixir.com/mojo
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://heylixir.com/mojo' }}
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: site
-          path: out/
-
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
-          local-dir: out/
-          # The /mojo folder only; the Heylixir site at / is never touched.
-          server-dir: ${{ vars.FTP_SERVER_DIR || '/mojo/' }}
+          name: deploy
+          path: deploy.zip
+          retention-days: 14

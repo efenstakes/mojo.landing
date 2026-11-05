@@ -13,15 +13,14 @@ const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://heylixir.com/moj
 export const siteUrl = rawSiteUrl.replace(/\/+$/, "");
 
 /**
- * Absolute URL for a path on this site. Pages get a trailing slash to match `trailingSlash: true`
- * (so canonicals, sitemap and the served URL agree); files keep theirs as-is.
- *   absoluteUrl("/guides")      -> https://heylixir.com/mojo/guides/
+ * Absolute URL for a path on this site, without a trailing slash (matching
+ * `trailingSlash: false` in next.config.js), so canonicals, the sitemap and the served URL agree.
+ *   absoluteUrl("/guides")      -> https://heylixir.com/mojo/guides
  *   absoluteUrl("/sitemap.xml") -> https://heylixir.com/mojo/sitemap.xml
  */
 export function absoluteUrl(path = "/"): string {
-  const p = path.startsWith("/") ? path : `/${path}`;
-  const isFile = /\.[a-z0-9]+$/i.test(p) || p.endsWith("/opengraph-image");
-  return `${siteUrl}${p}${isFile || p.endsWith("/") ? "" : "/"}`;
+  const p = (path.startsWith("/") ? path : `/${path}`).replace(/\/+$/, "");
+  return `${siteUrl}${p}`;
 }
 
 export const site = {

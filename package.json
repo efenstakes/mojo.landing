@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NODE_OPTIONS='--max-old-space-size=2048' next dev",
+    "build": "rm -rf .next && next build --webpack",
+    "postbuild": "cp -r .next/static .next/standalone/.next/static && cp -r public .next/standalone/public && (cd .next/standalone && zip -r ../../deploy.zip .)",
     "start": "next start",
-    "lint": "eslint",
-    "build:static": "NEXT_OUTPUT=export next build",
-    "package:namecheap": "node scripts/package-namecheap.mjs",
-    "package:namecheap:node": "node scripts/package-namecheap.mjs --node"
+    "lint": "eslint"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -17,7 +15,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
+    "@tailwindcss/postcss": "^4.3.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
